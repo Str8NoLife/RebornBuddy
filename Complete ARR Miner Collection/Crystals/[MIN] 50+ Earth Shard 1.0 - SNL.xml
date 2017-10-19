@@ -1,0 +1,39 @@
+﻿<!--
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ Profile: [MIN] Earth Shard               
+ Author: Str8_no_life                           
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ Version: 1.0                                     
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+-->
+<Profile>
+
+	<Name>[MIN] 50+ Earth Shard (v1.0) -SNL</Name>
+
+	<Order>			
+	
+			<While Condition="Core.Player.ClassLevel &gt; 1">
+				<If Condition="not IsOnMap(135)">
+					<TeleportTo Name="Moraby Drydocks" AetheryteId="10" />
+				</If>
+				
+				<ExGather DiscoverUnknowns="true">
+				
+					<GatherObjects>
+						<GatherObject>Rocky Outcrop</GatherObject>
+					</GatherObjects>
+					
+					<Items>
+						<GatherItem Name="Earth Shard" />
+					</Items>
+					
+					<HotSpots>
+						<HotSpot Radius="100" XYZ="15.58888, 35.43816, 685.0199" />
+					</HotSpots>
+					
+				</ExGather>
+			</While>
+
+	</Order>
+
+</Profile>

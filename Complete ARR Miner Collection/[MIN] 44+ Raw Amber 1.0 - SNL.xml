@@ -1,0 +1,39 @@
+﻿<!--
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ Profile: [MIN] Raw Amber               
+ Author: Str8_no_life                           
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ Version: 1.0                                     
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+-->
+<Profile>
+
+	<Name>[MIN] 44+ Raw Amber (v1.0) -SNL</Name>
+
+	<Order>			
+	
+			<While Condition="Core.Player.ClassLevel &gt; 1">
+				<If Condition="not IsOnMap(145)">
+					<TeleportTo Name="Camp Drybone" AetheryteId="18" />
+				</If>
+				
+				<ExGather DiscoverUnknowns="true">
+				
+					<GatherObjects>
+						<GatherObject>Mineral Deposit</GatherObject>
+					</GatherObjects>
+					
+					<Items>
+						<GatherItem Name="Raw Amber" />
+					</Items>
+					
+					<HotSpots>
+						<HotSpot Radius="100" XYZ="-427.421, -16.80095, -110.4754" />
+					</HotSpots>
+					
+				</ExGather>
+			</While>
+
+	</Order>
+
+</Profile>

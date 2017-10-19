@@ -1,0 +1,39 @@
+﻿<!--
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ Profile: [MIN] Raw Tourmaline               
+ Author: Str8_no_life                           
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ Version: 1.0                                     
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+-->
+<Profile>
+
+	<Name>[MIN] 36+ Raw Tourmaline (v1.0) -SNL</Name>
+
+	<Order>			
+	
+			<While Condition="Core.Player.ClassLevel &gt; 1">
+				<If Condition="not IsOnMap(153)">
+					<TeleportTo Name="Quarrymill" AetheryteId="5" />
+				</If>
+				
+				<ExGather DiscoverUnknowns="true">
+				
+					<GatherObjects>
+						<GatherObject>Mineral Deposit</GatherObject>
+					</GatherObjects>
+					
+					<Items>
+						<GatherItem Name="Raw Tourmaline" />
+					</Items>
+					
+					<HotSpots>
+						<HotSpot Radius="80" XYZ="351.1885, -3.271992, 57.56437" />
+					</HotSpots>
+					
+				</ExGather>
+			</While>
+
+	</Order>
+
+</Profile>

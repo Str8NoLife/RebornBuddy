@@ -1,0 +1,39 @@
+﻿<!--
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ Profile: [MIN] Grade 1 La Noscean Topsoil               
+ Author: Str8_no_life                           
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ Version: 1.0                                     
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+-->
+<Profile>
+
+	<Name>[MIN] 28+ Grade 1 La Noscean Topsoil (v1.0) -SNL</Name>
+
+	<Order>			
+
+			<While Condition="Core.Player.ClassLevel &gt; 1">
+				<If Condition="not IsOnMap(135)">
+					<TeleportTo Name="Moraby Drydocks" AetheryteId="10" />
+				</If>
+				
+				<ExGather DiscoverUnknowns="true">
+				
+					<GatherObjects>
+						<GatherObject>Rocky Outcrop</GatherObject>
+					</GatherObjects>
+					
+					<Items>
+						<GatherItem Name="Grade 1 La Noscean Topsoil" />
+					</Items>
+					
+					<HotSpots>
+						<HotSpot Radius="80" XYZ="278.7693, 74.04195, -270.8238" />
+					</HotSpots>
+					
+				</ExGather>
+			</While>
+
+	</Order>
+
+</Profile>

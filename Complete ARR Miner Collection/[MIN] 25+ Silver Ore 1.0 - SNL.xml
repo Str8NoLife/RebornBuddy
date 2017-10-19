@@ -1,0 +1,39 @@
+﻿<!--
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ Profile: [MIN] Silver Ore               
+ Author: Str8_no_life                           
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ Version: 1.0                                     
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+-->
+<Profile>
+
+	<Name>[MIN] 25+ Silver Ore (v1.0) -SNL</Name>
+
+	<Order>			
+
+			<While Condition="Core.Player.ClassLevel &gt; 1">
+				<If Condition="not IsOnMap(153)">
+					<TeleportTo Name="Quarrymill" AetheryteId="5" />
+				</If>
+				
+				<ExGather DiscoverUnknowns="true">
+				
+					<GatherObjects>
+						<GatherObject>Mineral Deposit</GatherObject>
+					</GatherObjects>
+					
+					<Items>
+						<GatherItem Name="Silver Ore" />
+					</Items>
+					
+					<HotSpots>
+						<HotSpot Radius="80" XYZ="-266.8046, 12.12231, -99.72062" />
+					</HotSpots>
+					
+				</ExGather>
+			</While>
+
+	</Order>
+
+</Profile>

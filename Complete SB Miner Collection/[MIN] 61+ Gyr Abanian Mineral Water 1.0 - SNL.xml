@@ -1,0 +1,42 @@
+﻿<!--
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ Profile: [MIN] Gyr Abanian Mineral Water               
+ Author: Str8_no_life                           
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ Version: 1.0                                     
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+-->
+<Profile>
+
+	<Name>[MIN] 61+ Gyr Abanian Mineral Water (v1.0) -SNL</Name>
+
+	<Order>			
+
+			<While Condition="Core.Player.ClassLevel &gt; 1">
+				<If Condition="not IsOnMap(612)">
+					<TeleportTo Name="Castrum Oriens" AetheryteId="98" /> 
+				</If>
+				
+					<ExGather DiscoverUnknowns="true" Loops="0">
+					
+					<GatherObjects>
+						<GatherObject>Mineral Deposit</GatherObject>
+					</GatherObjects>
+					
+					<Items>
+						<GatherItem Name="Gyr Abanian Mineral Water" />
+					</Items>
+					
+					<HotSpots>
+						<HotSpot Radius="26" XYZ="93.27251, 71.54698, -395.6156" />
+						<HotSpot Radius="30" XYZ="90.003, 64.60847, -318.9069" />
+						<HotSpot Radius="30" XYZ="220.4771, 79.13238, -315.9919" />
+						<HotSpot Radius="20" XYZ="126.6851, 81.69329, -407.8371" />
+					</HotSpots>
+					
+				</ExGather>
+			</While>
+
+	</Order>
+
+</Profile>

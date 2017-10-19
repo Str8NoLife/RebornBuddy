@@ -1,0 +1,42 @@
+﻿<!--
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ Profile: [MIN] Wyrm Obsidian               
+ Author: Str8_no_life                           
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ Version: 1.0                                     
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+-->
+<Profile>
+
+	<Name>[MIN] 60+ Wyrm Obsidian (v1.0) -SNL</Name>
+
+	<Order>			
+
+			<While Condition="Core.Player.ClassLevel &gt; 1">
+				<If Condition="not IsOnMap(399)">
+					<TeleportTo Name="Idyllshire" AetheryteId="75" />
+					<GetTo ZoneId="399" XYZ="-221.1569, 104.3043, -600.2543" />
+				</If>
+				
+				<ExGather DiscoverUnknowns="true">
+				
+					<GatherObjects>
+						<GatherObject>Mineral Deposit</GatherObject>
+					</GatherObjects>
+					
+					<Items>
+						<GatherItem Name="Wyrm Obsidian" />
+					</Items>
+					
+					<HotSpots>
+						<HotSpot Radius="80" XYZ="123.837, 100.0971, 61.18682" />
+						<HotSpot Radius="80" XYZ="225.1462, 97.93347, 156.1413" />
+						<HotSpot Radius="80" XYZ="74.98616, 85.37343, 158.763" />
+					</HotSpots>
+					
+				</ExGather>
+			</While>
+
+	</Order>
+
+</Profile>

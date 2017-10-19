@@ -1,0 +1,34 @@
+<!--
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ Profile: [Combat] Tiger Hide 1.0 -SNL               
+ Author: Str8_no_life                           
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ Version: 1.0                                     
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+-->
+<Profile>
+	
+	<Name>Tiger Hide 1.0 -SNL</Name>
+	
+	<Order>
+		<If Condition="not IsOnMap(614)">
+		<TeleportTo Name="Onokoro" AetheryteId="107" />
+		</If>
+		<Grind while="Core.Player.ClassLevel &gt; 1" grindRef="Tiger Hide"/>
+	</Order>    
+  
+	<GrindAreas>
+		<GrindArea name="Tiger Hide">
+		
+		<TargetMobs>
+			<TargetMob Id="5760"/>
+		</TargetMobs>
+		
+		<Hotspots> 
+			<HotSpot name="Yanxian Tiger" Radius="300" XYZ="748.9975, 122.3945, -248.4226" />
+		</Hotspots>
+			
+		</GrindArea>	
+	</GrindAreas>
+  
+</Profile>

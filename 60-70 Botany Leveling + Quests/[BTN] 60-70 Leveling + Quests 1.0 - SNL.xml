@@ -1,0 +1,590 @@
+﻿<!--
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ Profile: [BTN] 60-70 Leveling + Quests 2.0 - SNL               
+ Author: Str8_no_life                           
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ Version: 1.0                                     
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ Required Level: 60                             
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+-->
+<Profile>
+
+	<Name>[BTN] 60-70 Leveling + Quests (v2.0) -SNL </Name>
+
+	<CodeChunks>
+		<CodeChunk Name="Wait">
+			<![CDATA[await Coroutine.Sleep(2500);]]>
+		</CodeChunk>
+		
+		<CodeChunk Name="MoveToWater">
+			<![CDATA[
+			if (!MovementManager.IsDiving) 
+			{await ExBuddy.Helpers.Behaviors.MoveTo
+			((new Clio.Utilities.Vector3("288.9279, -0.4276559, -77.97141")),
+				true,
+				0,
+				0,
+				null
+			);
+			}
+		]]>
+		</CodeChunk>
+
+		<CodeChunk Name="Triangulate">
+			<![CDATA[ SpellData data;
+			if (!Core.Me.HasAura(217) && ActionManager.CurrentActions.TryGetValue(210, out data) && ActionManager.CanCast(data, Core.Me)) ActionManager.DoAction(210, Core.Me);
+    	]]>
+		</CodeChunk>
+	</CodeChunks>
+	<Order>
+
+		<RunCode Name="Triangulate" />
+
+			<!-- Level 60 Quest pick up -->
+			<!-- Never Meet Your Heroes -->
+			
+			<If Condition="not IsQuestCompleted(67588)">
+			<LogMessage Message="You need to complete all Pre-Stormblood class quests first" />
+			</If>
+			<If Condition="not IsQuestCompleted(68156)">
+				<If Condition="not HasQuest(68156)">
+					<If Condition="not IsOnMap(133)">
+						<GetTo ZoneId="133" XYZ="-234.7232, 6.214283, -169.4621" />
+					</If>
+					<If Condition="IsQuestAcceptQualified(68156)">
+						<PickupQuest NpcId="1000815" QuestId="68156" XYZ="-233.9361, 6.668152, -171.0384" />
+					</If>
+				</If>
+			</If>
+			<If Condition="HasQuest(68156)">
+				<If Condition="GetQuestStep(68156) == 1">
+					<If Condition="not IsOnMap(478)">
+						<GetTo ZoneId="478" XYZ="-46.0775, 209.2149, -91.41878" />
+					</If>
+						<TalkTo QuestId="68156" StepId="1" NpcId="1021349" XYZ="-43.93079, 209.2364, -90.77594" />
+				</If>
+			</If>
+			<If Condition="HasQuest(68156)">
+				<If Condition="GetQuestStep(68156) == 255">
+					<If Condition="not IsOnMap(478)">
+						<GetTo ZoneId="478" XYZ="-46.0775, 209.2149, -91.41878" />
+					</If>
+						<TurnIn QuestId="68156" StepId="255" NpcId="1021349" XYZ="-43.93079, 209.2364, -90.77594" />
+				</If>
+			</If>
+			
+			<!-- Level 60-63 -->
+		
+			<While Condition="Core.Player.ClassLevel &lt; 63">
+				<If Condition="not IsOnMap(612)">
+					<TeleportTo Name="Castrum Oriens" AetheryteId="98" />
+				</If>
+				<ExGather DiscoverUnknowns="true" Loops="1">
+					<GatherObjects>
+						<GatherObject>Lush Vegetation Patch</GatherObject>
+					</GatherObjects>
+					<Items>
+						<GatherItem Name="Gyr Abanian Wheat" />
+					</Items>
+					<HotSpots>
+						<HotSpot Radius="30" XYZ="-256.2033, 78.43914, -572.7908" />
+						<HotSpot Radius="30" XYZ="-249.7132, 77.71297, -614.1143" />
+						<HotSpot Radius="30" XYZ="-274.6569, 77.22163, -656.6318" />
+						<HotSpot Radius="30" XYZ="-262.0753, 91.13295, -687.8615" />
+						<HotSpot Radius="30" XYZ="-92.44455, 73.46851, -649.1522" />
+						<HotSpot Radius="50" XYZ="-49.74776, 71.98768, -612.5621" />
+					</HotSpots>
+				</ExGather>
+			</While>
+		
+			<!-- Level 63 Quest pick up -->
+			<!-- You Say Popoto, I Say... -->
+		
+			<If Condition="not IsQuestCompleted(68157)">
+				<If Condition="not HasQuest(68157)">
+					<If Condition="not IsOnMap(478)">
+						<GetTo ZoneId="478" XYZ="-46.0775, 209.2149, -91.41878" />
+					</If>
+					<If Condition="IsQuestAcceptQualified(68157)">
+						<PickupQuest NpcId="1021349" QuestId="68157" XYZ="-43.93079, 209.2364, -90.77594" />
+					</If>
+				</If>
+			</If>
+			<If Condition="HasQuest(68157)">
+				<If Condition="GetQuestStep(68157) == 1">
+					<If Condition="not IsOnMap(132)">
+						<GetTo ZoneId="132" XYZ="7.248047, -0.280928, 6.301941" />
+					</If>
+						<TalkTo QuestId="68157" StepId="1" NpcId="1021350" XYZ="7.248047, -0.280928, 6.301941" />
+				</If>
+			</If>
+			<If Condition="HasQuest(68157)">
+				<If Condition="GetQuestStep(68157) == 2">
+					<If Condition="not IsOnMap(133)">
+						<GetTo ZoneId="133" XYZ="-234.7232, 6.214283, -169.4621" />
+					</If>
+						<TalkTo QuestId="68157" StepId="2" NpcId="1000815" XYZ="-233.9361, 6.668152, -171.0384" />
+				</If>
+			</If>
+			<If Condition="HasQuest(68157)">
+				<If Condition="GetQuestStep(68157) == 3">
+					<If Condition="not IsOnMap(612)">
+						<GetTo ZoneId="612" XYZ="-446.2482, 52.74446, 34.96308" />
+					</If>
+						<TalkTo QuestId="68157" StepId="3" NpcId="1021352" XYZ="-445.3346, 52.70018, 31.75391" />
+				</If>
+			</If>
+			<If Condition="GetQuestStep(68157) == 4">
+				<If Condition="not HqHasAtLeast(17945,3)">
+				<If Condition="not IsOnMap(612)">
+					<TeleportTo Name="Castrum Oriens" AetheryteId="98" />
+				</If>
+					<ExGather DiscoverUnknowns="true" while="not HqHasAtLeast(17945,3)">
+					<GatherObjects>
+						<GatherObject>Lush Vegetation Patch</GatherObject>
+					</GatherObjects>
+					<Items>
+						<GatherItem Name="Wild Popoto" />
+					</Items>
+					<HotSpots>
+						<HotSpot Radius="60" XYZ="-496.5482, 72.52773, 122.5844" />
+						<HotSpot Radius="25" XYZ="-430.6966, 65.51409, 142.7658" />
+						<HotSpot Radius="25" XYZ="-400.8915, 69.29028, 166.1169" />
+						<HotSpot Radius="60" XYZ="-499.056, 71.61702, 258.342" />	
+					</HotSpots>
+					<GatheringSkillOrder>
+						<GatheringSkill SpellName="Prune II" TimesToCast="1"/>
+					</GatheringSkillOrder>
+				</ExGather>
+				</If>
+			</If>
+			<If Condition="HqHasAtLeast(17945,3)">
+				<If Condition="GetQuestStep(68157) == 4">
+					<If Condition="not IsOnMap(612)">
+						<GetTo ZoneId="612" XYZ="-446.2482, 52.74446, 34.96308" />
+					</If>
+					<If Condition="GetQuestStep(68157) == 4">
+						<TurnIn ItemId="17945" RequiresHq="true" QuestId="68157" StepId="4" NpcId="1021352" XYZ="-445.3346, 52.70018, 31.75391" />
+					</If>
+				</If>
+			</If>
+			<If Condition="HasQuest(68157)">
+				<If Condition="GetQuestStep(68157) == 255">
+					<If Condition="not IsOnMap(478)">
+						<GetTo ZoneId="478" XYZ="-46.0775, 209.2149, -91.41878" />
+					</If>
+						<TurnIn QuestId="68157" StepId="255" NpcId="1021349" XYZ="-43.93079, 209.2364, -90.77594" />
+				</If>
+			</If>
+			
+			<!-- Level 63-65 -->
+		
+			<While Condition="Core.Player.ClassLevel &lt; 65">
+				<If Condition="not IsOnMap(613)">
+					<TeleportTo Name="Onokoro" AetheryteId="106" />
+				</If>
+				<RunCode Name="MoveToWater"/>
+				<RunCode Name="Wait"/>
+				<ExGather DiscoverUnknowns="true" Loops="1">
+					<GatherObjects>
+						<GatherObject>Lush Vegetation Patch</GatherObject>
+					</GatherObjects>
+					<Items>
+						<GatherItem Name="Ruby Cotton Boll" />
+					</Items>
+					<HotSpots>
+						<HotSpot Radius="80" XYZ="280.4083, -43.65251, -37.44692" />
+						<HotSpot Radius="80" XYZ="274.4963, -91.48736, 98.58102" />
+					</HotSpots>
+				</ExGather>
+			</While>
+		
+			<!-- Level 63 Quest pick up -->
+			<!-- Walking for Walker's -->
+		
+			<If Condition="not IsQuestCompleted(68158)">
+				<If Condition="not HasQuest(68158)">
+					<If Condition="not IsOnMap(478)">
+						<GetTo ZoneId="478" XYZ="-46.0775, 209.2149, -91.41878" />
+					</If>
+					<If Condition="IsQuestAcceptQualified(68158)">
+						<PickupQuest NpcId="1021349" QuestId="68158" XYZ="-43.93079, 209.2364, -90.77594" />
+					</If>
+				</If>
+			</If>
+			<If Condition="HasQuest(68158)">
+				<If Condition="GetQuestStep(68158) == 1">
+					<If Condition="not IsOnMap(133)">
+						<GetTo ZoneId="133" XYZ="-234.7232, 6.214283, -169.4621" />
+					</If>
+						<TalkTo QuestId="68158" StepId="1" NpcId="1000815" XYZ="-233.9361, 6.668152, -171.0384" />
+				</If>
+			</If>
+			<If Condition="HasQuest(68158)">
+				<If Condition="GetQuestStep(68158) == 2">
+					<If Condition="not IsOnMap(135)">
+						<GetTo ZoneId="135" XYZ="537.5997, 89, -66.02411" />
+					</If>
+						<TalkTo QuestId="68158" StepId="2" NpcId="1002657" XYZ="540.5203, 89, -74.02161" />
+				</If>
+			</If>
+			<If Condition="HasQuest(68158)">
+				<If Condition="GetQuestStep(68158) == 2">
+					<If Condition="not IsOnMap(135)">
+						<GetTo ZoneId="135" XYZ="537.5997, 89, -66.02411" />
+					</If>
+						<TalkTo QuestId="68158" StepId="2" NpcId="1002659" XYZ="532.8297, 88.99998, -72.09894" />
+				</If>
+			</If>
+			<If Condition="HasQuest(68158)">
+				<If Condition="GetQuestStep(68158) == 3">
+					<If Condition="not IsOnMap(135)">
+						<GetTo ZoneId="135" XYZ="537.5997, 89, -66.02411" />
+					</If>
+						<TalkTo QuestId="68158" StepId="3" NpcId="1021353" XYZ="564.1716, 84.45213, -100.3281" />
+				</If>
+			</If>
+			<If Condition="HasQuest(68158)">
+				<If Condition="GetQuestStep(68158) == 4">
+					<If Condition="not IsOnMap(628)">
+						<GetTo ZoneId="628" XYZ="59.22021, 4, 67.70422" />
+					</If>
+						<TalkTo QuestId="68158" StepId="4" NpcId="1019064" XYZ="59.22021, 4, 67.70422" />
+				</If>
+			</If>
+			<If Condition="HasQuest(68158)">
+				<If Condition="GetQuestStep(68158) == 4">
+					<If Condition="not IsOnMap(628)">
+						<GetTo ZoneId="628" XYZ="59.22021, 4, 67.70422" />
+					</If>
+						<TalkTo QuestId="68158" StepId="4" NpcId="1019065" XYZ="80.49133, 4, 56.44312" />
+				</If>
+			</If>
+			<If Condition="HasQuest(68158)">
+				<If Condition="GetQuestStep(68158) == 5">
+					<If Condition="not IsOnMap(613)">
+						<GetTo ZoneId="613" XYZ="-728.0971, 2.013614, -610.6965" />
+					</If>
+						<TalkTo QuestId="68158" StepId="5" NpcId="1019233" XYZ="-734.1573, 1.960285, -611.3832" />
+				</If>
+			</If>
+			<If Condition="GetQuestStep(68158) == 255">
+				<If Condition="not HqHasAtLeast(17946,5)">
+				<If Condition="not IsOnMap(613)">
+					<TeleportTo Name="Onokoro" AetheryteId="106" />
+				</If>
+					<ExGather DiscoverUnknowns="true" while="not HqHasAtLeast(17946,5)">
+					<GatherObjects>
+						<GatherObject>Lush Vegetation Patch</GatherObject>
+					</GatherObjects>
+					<Items>
+						<GatherItem Name="Walker's Popoto" />
+					</Items>
+					<HotSpots>
+						<HotSpot Radius="45" XYZ="-512.0748, 47.94436, -699.3668" />
+						<HotSpot Radius="45" XYZ="-656.4936, 44.17736, -788.0309" />
+						<HotSpot Radius="45" XYZ="-712.2689, 42.0208, -652.6238" />
+					</HotSpots>
+					<GatheringSkillOrder>
+						<GatheringSkill SpellName="Prune II" TimesToCast="1"/>
+					</GatheringSkillOrder>
+				</ExGather>
+				</If>
+			</If>
+			
+			<If Condition="HqHasAtLeast(17946,5)">
+				<If Condition="GetQuestStep(68158) == 255">
+					<If Condition="not IsOnMap(478)">
+						<GetTo ZoneId="478" XYZ="-46.0775, 209.2149, -91.41878" />
+					</If>
+					<If Condition="GetQuestStep(68158) == 255">
+						<TurnIn ItemId="17946" RequiresHq="true" QuestId="68158" StepId="255" NpcId="1021349" XYZ="-43.93079, 209.2364, -90.77594" />
+					</If>
+				</If>
+			</If>
+		
+			<!-- Level 65-67 -->
+		
+			<While Condition="Core.Player.ClassLevel &lt; 67">
+					<If Condition="not IsOnMap(614)">
+						<TeleportTo Name="Namai" AetheryteId="107" />
+				</If>
+				<ExGather DiscoverUnknowns="true" Loops="1">
+					<GatherObjects>
+						<GatherObject>Mature Tree</GatherObject>
+					</GatherObjects>
+					<Items>
+						<GatherItem Name="Pine Log" />
+					</Items>
+					<HotSpots>
+						<HotSpot Radius="70" XYZ="654.3035, 148.8893, -364.2143" />
+						<HotSpot Radius="70" XYZ="741.0139, 131.3789, -273.0019" />	
+					</HotSpots>
+				</ExGather>
+			</While>
+		
+			<!-- Level 67-69 -->
+		
+			<While Condition="Core.Player.ClassLevel &lt; 69">
+					<If Condition="not IsOnMap(612)">
+						<TeleportTo Name="Castrum Oriens" AetheryteId="98" />
+					</If>
+					<If Condition="IsOnMap(612)">
+						<MoveTo XYZ="-636.7138, 82.62141, 347.2164" />
+					</If>
+				<ExGather DiscoverUnknowns="true" Loops="1">
+					<GatherObjects>
+						<GatherObject>Mature Tree</GatherObject>
+					</GatherObjects>
+					<Items>
+						<GatherItem Name="Persimmon Log" />
+					</Items>
+					<HotSpots>
+						<HotSpot Radius="30" XYZ="-602.5367, 51.55609, 389.0897" />
+						<HotSpot Radius="15" XYZ="-574.9916, 47.11102, 441.8481" />
+						<HotSpot Radius="55" XYZ="-583.6998, 46.183, 479.5052" />
+						<HotSpot Radius="20" XYZ="-643.6602, 52.32621, 410.5079" />							
+						<HotSpot Radius="40" XYZ="-677.5248, 67.12322, 370.3503" />
+					</HotSpots>
+				</ExGather>
+			</While>
+		
+			<!-- Level 68 Quest pick up -->
+			<!-- The White Death -->
+			
+			<If Condition="not IsQuestCompleted(68159)">
+				<If Condition="not HasQuest(68159)">
+					<If Condition="not IsOnMap(478)">
+						<GetTo ZoneId="478" XYZ="-46.0775, 209.2149, -91.41878" />
+					</If>
+					<If Condition="IsQuestAcceptQualified(68159)">
+						<PickupQuest NpcId="1021349" QuestId="68159" XYZ="-43.93079, 209.2364, -90.77594" />
+					</If>
+				</If>
+			</If>
+			<If Condition="HasQuest(68159)">
+				<If Condition="GetQuestStep(68159) == 1">
+					<If Condition="not IsOnMap(133)">
+						<GetTo ZoneId="133" XYZ="-234.7232, 6.214283, -169.4621" />
+					</If>
+						<TalkTo QuestId="68159" StepId="1" NpcId="1000815" XYZ="-233.9361, 6.668152, -171.0384" />
+				</If>
+			</If>
+			<If Condition="HasQuest(68159)">
+				<If Condition="GetQuestStep(68159) == 2">
+					<If Condition="not IsOnMap(478)">
+						<GetTo ZoneId="478" XYZ="-47.20974, 209.1833, -88.08735" />
+					</If>
+						<TalkTo QuestId="68159" StepId="2" NpcId="2008181" XYZ="-46.31122, 209.4911, -86.35089" />
+				</If>
+			</If>
+			<If Condition="HasQuest(68159)">
+				<If Condition="GetQuestStep(68159) == 3">
+					<If Condition="not IsOnMap(478)">
+						<GetTo ZoneId="478" XYZ="-47.20974, 209.1833, -88.08735" />
+					</If>
+						<TalkTo QuestId="68159" StepId="3" NpcId="2008181" XYZ="-46.31122, 209.4911, -86.35089" />
+				</If>
+			</If>
+			<If Condition="HasQuest(68159)">
+				<If Condition="GetQuestStep(68159) == 4">
+					<If Condition="not IsOnMap(478)">
+						<GetTo ZoneId="478" XYZ="-47.20974, 209.1833, -88.08735" />
+					</If>
+						<TurnIn ItemId="2002166" QuestId="68159" StepId="4" NpcId="1021349" XYZ="-43.93079, 209.2364, -90.77594" />
+				</If>
+			</If>
+			<If Condition="HasQuest(68159)">
+				<If Condition="GetQuestStep(68159) == 5">
+					<If Condition="not IsOnMap(478)">
+						<GetTo ZoneId="478" XYZ="75.76601, 214.1, -91.18611" />
+					</If>
+						<TurnIn ItemId="2002167" QuestId="68159" StepId="5" NpcId="1017106" XYZ="73.99097, 214.12, -92.57648" />
+				</If>
+			</If>
+
+			<If Condition="GetQuestStep(68159) == 6">
+				<If Condition="not HqHasAtLeast(17947,8)">
+				<If Condition="not IsOnMap(613)">
+					<TeleportTo Name="Onokoro" AetheryteId="106" />
+				</If>
+				<RunCode Name="MoveToWater"/>
+				<RunCode Name="Wait"/>
+					<ExGather DiscoverUnknowns="true" while="not HqHasAtLeast(17947,8)">
+					<GatherObjects>
+						<GatherObject>Lush Vegetation Patch</GatherObject>
+					</GatherObjects>
+					<Items>
+						<GatherItem Name="Nanoriso" />
+					</Items>
+					<HotSpots>
+						<HotSpot Radius="70" XYZ="-405.161, -65.21349, -408.1085" />
+						<HotSpot Radius="35" XYZ="-524.3369, -77.45132, -439.9007" />
+						<HotSpot Radius="35" XYZ="-513.5323, -83.26814, -400.858" />
+						<HotSpot Radius="40" XYZ="-528.6201, -87.44595, -356.1151" />
+						<HotSpot Radius="60" XYZ="-492.8069, -94.83219, -295.7921" />
+						<HotSpot Radius="60" XYZ="-372.0681, -112.48, -243.6718" />
+					</HotSpots>
+					<GatheringSkillOrder>
+						<GatheringSkill SpellName="Prune II" TimesToCast="1"/>
+					</GatheringSkillOrder>
+				</ExGather>
+				</If>
+			</If>
+			
+			<If Condition="HqHasAtLeast(17947,8)">
+				<If Condition="GetQuestStep(68159) == 6">
+					<If Condition="not IsOnMap(478)">
+						<GetTo ZoneId="478" XYZ="75.76601, 214.1, -91.18611" />
+					</If>
+					<If Condition="GetQuestStep(68159) == 6">
+						<TurnIn ItemId="17947" RequiresHq="true" QuestId="68159" StepId="6" NpcId="1017106" XYZ="73.99097, 214.12, -92.57648" />
+					</If>
+				</If>
+			</If>
+			<If Condition="HasQuest(68159)">
+				<If Condition="GetQuestStep(68159) == 255">
+					<If Condition="not IsOnMap(478)">
+						<GetTo ZoneId="478" XYZ="-46.0775, 209.2149, -91.41878" />
+					</If>
+						<TurnIn ItemId="2002168" QuestId="68159" StepId="255" NpcId="1021349" XYZ="-43.93079, 209.2364, -90.77594" />
+				</If>
+			</If>
+		
+			<!-- Level 68-70  -->
+		
+			<While Condition="Core.Player.ClassLevel &lt; 70">
+					<If Condition="not IsOnMap(620)">
+						<TeleportTo Name="Ala Ghiri" AetheryteId="101" />
+					</If>
+				<ExGather DiscoverUnknowns="true" Loops="1">
+					<GatherObjects>
+						<GatherObject>Lush Vegetation Patch</GatherObject>
+					</GatherObjects>
+					<Items>
+						<GatherItem Name="Twincoon" />
+					</Items>
+					<HotSpots>
+						<HotSpot Radius="40" XYZ="168.1878, 344.5044, 507.5728" />
+						<HotSpot Radius="40" XYZ="275.3521, 367.0075, 564.882" />
+						<HotSpot Radius="40" XYZ="293.4287, 347.6435, 414.8386" />
+					</HotSpots>
+				</ExGather>
+			</While>
+		
+			<!-- Level 70 Quest pick up -->
+			<!-- Edgyth's Winning Streak -->
+		
+			<If Condition="not IsQuestCompleted(68160)">
+				<If Condition="not HasQuest(68160)">
+					<If Condition="not IsOnMap(478)">
+						<GetTo ZoneId="478" XYZ="-46.0775, 209.2149, -91.41878" />
+					</If>
+					<If Condition="IsQuestAcceptQualified(68160)">
+						<PickupQuest NpcId="1021349" QuestId="68160" XYZ="-43.93079, 209.2364, -90.77594" />
+					</If>
+				</If>
+			</If>
+			<If Condition="HasQuest(68160)">
+				<If Condition="GetQuestStep(68160) == 1">
+					<If Condition="not IsOnMap(133)">
+						<GetTo ZoneId="133" XYZ="-234.7232, 6.214283, -169.4621" />
+					</If>
+						<TalkTo QuestId="68160" StepId="1" NpcId="1000815" XYZ="-233.9361, 6.668152, -171.0384" />
+				</If>
+			</If>
+			<If Condition="HasQuest(68160)">
+				<If Condition="GetQuestStep(68160) == 2">
+					<If Condition="not IsOnMap(612)">
+						<GetTo ZoneId="612" XYZ="-601.4808, 130, -484.4771" />
+					</If>
+						<TalkTo QuestId="68160" StepId="2" NpcId="1021358" XYZ="-599.5422, 130, -483.3295" />
+				</If>
+			</If>
+			<If Condition="HasQuest(68160)">
+				<If Condition="GetQuestStep(68160) == 3">
+					<If Condition="not IsOnMap(620)">
+						<GetTo ZoneId="620" XYZ="-263.9561, 256.9996, 697.4667" />
+					</If>
+						<TalkTo QuestId="68160" StepId="3" NpcId="1021359" XYZ="-262.2568, 256.9718, 695.5214" />
+				</If>
+			</If>
+			<If Condition="HasQuest(68160)">
+				<If Condition="GetQuestStep(68160) == 4">
+					<If Condition="not IsOnMap(620)">
+						<GetTo ZoneId="620" XYZ="-276.9427, 258.9065, 781.1803" />
+					</If>
+						<TalkTo QuestId="68160" StepId="4" NpcId="1021591" XYZ="-277.821, 258.9065, 782.7725" />
+				</If>
+			</If>
+			<If Condition="HasQuest(68160)">
+				<If Condition="GetQuestStep(68160) == 4">
+					<If Condition="not IsOnMap(620)">
+						<GetTo ZoneId="620" XYZ="-234.5514, 258.9065, 783.0423" />
+					</If>
+						<TalkTo QuestId="68160" StepId="4" NpcId="1021595" XYZ="-232.5017, 258.9065, 783.505" />
+				</If>
+			</If>
+			<If Condition="HasQuest(68160)">
+				<If Condition="GetQuestStep(68160) == 4">
+					<If Condition="not IsOnMap(620)">
+						<GetTo ZoneId="620" XYZ="-218.8539, 257.5265, 739.2842" />
+					</If>
+						<TalkTo QuestId="68160" StepId="4" NpcId="1020870" XYZ="-218.616, 257.5265, 737.1786" />
+				</If>
+			</If>
+			<If Condition="HasQuest(68160)">
+				<If Condition="GetQuestStep(68160) == 5">
+					<If Condition="not IsOnMap(620)">
+						<GetTo ZoneId="620" XYZ="-245.5917, 257.5265, 744.1901" />
+					</If>
+						<TalkTo QuestId="68160" StepId="5" NpcId="1022381" XYZ="-243.1221, 257.5265, 744.0145" />
+				</If>
+			</If>
+			<If Condition="HasQuest(68160)">
+				<If Condition="GetQuestStep(68160) == 255">
+				<If Condition="not HasAtLeast(17948,5)">
+					<If Condition="not IsOnMap(621)">
+						<TeleportTo Name="Porta Praetoria" AetheryteId="102" />
+					</If>
+					<If Condition="GetQuestStep(68160) == 255">
+					<NoCombatMoveTo XYZ="-748.472, 154.4223, -632.9702" />
+						<ExGather DiscoverUnknowns="false" while="not HasAtLeast(17948,5)">
+						<GatherObjects>
+							<GatherObject>Unspoiled Lush Vegetation Patch</GatherObject>
+						</GatherObjects>
+						<Items>
+							<GatherItem Name="Rhalgr's Streak" />
+						</Items>
+						<HotSpots>
+							<HotSpot Radius="100" XYZ="-748.472, 154.4223, -632.9702" />
+						</HotSpots>
+						<GatheringSkillOrder>
+							<GatheringSkill SpellName="Bountiful Harvest" TimesToCast="2" />
+						</GatheringSkillOrder>
+						<Slot>1</Slot>
+						</ExGather>
+					</If>
+				</If>
+				</If>
+			</If>
+			<If Condition="HasAtLeast(17948,5)">
+				<If Condition="GetQuestStep(68160) == 255">
+					<If Condition="not IsOnMap(478)">
+						<GetTo ZoneId="478" XYZ="-46.0775, 209.2149, -91.41878" />
+					</If>
+					<If Condition="GetQuestStep(68160) == 255">
+						<TurnIn ItemId="17948" RequiresHq="false" QuestId="68160" StepId="255" NpcId="1021349" XYZ="-43.93079, 209.2364, -90.77594" />
+					</If>
+				</If>
+			</If>
+		
+		<If Condition="Core.Player.ClassLevel == 70">
+			<LogMessage Message="Congrats! You've hit level 70 Botanist and completed all class quests!" />
+		</If>
+
+	</Order>
+	<GrindAreas>
+	</GrindAreas>
+</Profile>

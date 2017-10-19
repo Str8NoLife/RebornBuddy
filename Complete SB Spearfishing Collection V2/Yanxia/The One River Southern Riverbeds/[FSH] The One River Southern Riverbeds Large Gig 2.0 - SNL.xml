@@ -1,0 +1,58 @@
+﻿<!--
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ Profile: [FSH] The One River Southern Riverbeds Large Gig               
+ Author: Str8_no_life                           
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ Version: 2.0                                     
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+-->
+<Profile>
+
+	<Name>[FSH] The One River Southern Riverbeds Large Gig (v2.0) -SNL</Name>
+
+	<CodeChunks>
+		<CodeChunk Name="Wait">
+			<![CDATA[await Coroutine.Sleep(5000);]]>
+		</CodeChunk>
+		
+		<CodeChunk Name="MoveToWater">
+			<![CDATA[
+			if (!MovementManager.IsDiving) 
+			{await ExBuddy.Helpers.Behaviors.MoveTo
+			((new Clio.Utilities.Vector3("155.2373, -0.1448698, 783.6364")),
+				true,
+				0,
+				0,
+				null
+			);
+			}
+		]]>
+		</CodeChunk>
+	</CodeChunks>
+	
+	<Order>
+
+		<While Condition="Core.Player.ClassLevel &gt; 1">
+				<If Condition="not IsOnMap(614)">
+					<TeleportTo Name="Namai" AetheryteId="107" />
+				</If>
+					
+				<RunCode Name="MoveToWater"/>
+				<RunCode Name="Wait"/>
+
+			<ExSpearFish GigId="2">
+				
+				<GatherObjects>
+					<GatherObject>Teeming Waters</GatherObject>
+				</GatherObjects>
+					
+				<HotSpots>
+					<HotSpot Radius="110" XYZ="23.1186, -71.18484, 781.8997" />
+				</HotSpots>
+					
+			</ExSpearFish>
+		</While>
+
+	</Order>
+
+</Profile>

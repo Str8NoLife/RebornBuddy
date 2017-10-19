@@ -1,0 +1,41 @@
+﻿<!--
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ Profile: [MIN] Raw Star Sapphire               
+ Author: Str8_no_life                           
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ Version: 1.0                                     
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+-->
+<Profile>
+
+	<Name>[MIN] 55+ Raw Star Sapphire (v1.0) -SNL</Name>
+
+	<Order>			
+
+			<While Condition="Core.Player.ClassLevel &gt; 1">
+				<If Condition="not IsOnMap(398)">
+					<TeleportTo Name="Tailfeather" AetheryteId="76" />
+				</If>
+				
+				<ExGather DiscoverUnknowns="true">
+				
+					<GatherObjects>
+						<GatherObject>Mineral Deposit</GatherObject>
+					</GatherObjects>
+					
+					<Items>
+						<GatherItem Name="Raw Star Sapphire" />
+					</Items>
+					
+					<HotSpots>
+						<HotSpot Radius="80" XYZ="358.6059, -11.65106, -284.9704" />
+						<HotSpot Radius="80" XYZ="336.8951, -3.791844, -399.4012" />
+						<HotSpot Radius="80" XYZ="487.0678, -14.87741, -415.0804" />
+					</HotSpots>
+					
+				</ExGather>
+			</While>
+
+	</Order>
+
+</Profile>

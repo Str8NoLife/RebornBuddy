@@ -1,0 +1,41 @@
+﻿<!--
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ Profile: [MIN]  Eventide Jade               
+ Author: Str8_no_life                           
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ Version: 1.0                                     
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+-->
+<Profile>
+
+	<Name>[MIN] 60+  Eventide Jade (v1.0) -SNL</Name>
+
+	<Order>			
+
+			<While Condition="Core.Player.ClassLevel &gt; 1">
+				<If Condition="not IsOnMap(401)">
+					<TeleportTo Name="Camp Cloudtop" AetheryteId="72" />
+				</If>
+				
+				<ExGather DiscoverUnknowns="true">
+				
+					<GatherObjects>
+						<GatherObject>Mineral Deposit</GatherObject>
+					</GatherObjects>
+					
+					<Items>
+						<GatherItem Name=" Eventide Jade" />
+					</Items>
+					
+					<HotSpots>
+						<HotSpot Radius="80" XYZ="537.5426, -81.09635, 415.9956" />
+						<HotSpot Radius="80" XYZ="630.2027, -96.39345, 366.4687" />
+						<HotSpot Radius="80" XYZ="700.1005, -79.55015, 459.8157" />
+					</HotSpots>
+					
+				</ExGather>
+			</While>
+
+	</Order>
+
+</Profile>

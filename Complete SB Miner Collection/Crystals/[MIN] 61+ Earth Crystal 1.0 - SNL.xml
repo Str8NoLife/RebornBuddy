@@ -1,0 +1,42 @@
+﻿<!--
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ Profile: [MIN] Earth Crystal               
+ Author: Str8_no_life                           
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ Version: 1.0                                     
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+-->
+<Profile>
+
+	<Name>[MIN] 61+ Earth Crystal (v1.0) -SNL</Name>
+
+	<Order>			
+
+			<While Condition="Core.Player.ClassLevel &gt; 1">
+				<If Condition="not IsOnMap(620)">
+					<TeleportTo Name="Ala Gannha" AetheryteId="100" />
+				</If>
+				
+					<ExGather DiscoverUnknowns="true" Loops="0">
+					
+					<GatherObjects>
+						<GatherObject>Rocky Outcrop</GatherObject>
+					</GatherObjects>
+					
+					<Items>
+						<GatherItem Name="Earth Crystal" />
+					</Items>
+					
+					<HotSpots>
+						<HotSpot Radius="20" XYZ="104.4426, 132.3978, -520.3786" />
+						<HotSpot Radius="20" XYZ="190.1709, 148.3933, -348.3352" />
+						<HotSpot Radius="10" XYZ="-10.2733, 134.8563, -374.4754" />
+						<HotSpot Radius="8" XYZ="-14.73359, 124.8442, -389.9182" />
+					</HotSpots>
+					
+				</ExGather>
+			</While>
+
+	</Order>
+
+</Profile>

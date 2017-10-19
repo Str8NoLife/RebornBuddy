@@ -1,0 +1,39 @@
+﻿<!--
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ Profile: [MIN] Grade 2 Shroud Topsoil               
+ Author: Str8_no_life                           
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ Version: 1.0                                     
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+-->
+<Profile>
+
+	<Name>[MIN] 50+ Grade 2 Shroud Topsoil (v1.0) -SNL</Name>
+
+	<Order>			
+	
+			<While Condition="Core.Player.ClassLevel &gt; 1">
+				<If Condition="not IsOnMap(152)">
+					<TeleportTo Name="The Hawthorne Hut" AetheryteId="4" />
+				</If>
+				
+				<ExGather DiscoverUnknowns="true">
+				
+					<GatherObjects>
+						<GatherObject>Rocky Outcrop</GatherObject>
+					</GatherObjects>
+					
+					<Items>
+						<GatherItem Name="Grade 2 Shroud Topsoil" />
+					</Items>
+					
+					<HotSpots>
+						<HotSpot Radius="100" XYZ="-160.4311, 0.4080597, 156.722" />
+					</HotSpots>
+					
+				</ExGather>
+			</While>
+
+	</Order>
+
+</Profile>

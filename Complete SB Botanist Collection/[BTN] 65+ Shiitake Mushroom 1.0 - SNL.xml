@@ -1,0 +1,130 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ Profile: [BTN] Shiitake Mushroom               
+ Author: Str8_no_life                           
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ Version: 1.0                                     
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ Required Level: 65                             
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ Required User Interaction:                     
+  None                                          
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ Required Setup:                                
+ Fill out User Configuration below.            
+ Level 65+ Botanist                            
+ Set Botanist Gear Set below.                  
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+-->
+<Profile>
+	<Name>[BTN] 65+ Shiitake Mushroom (v1.0) -SNL </Name>
+	<BehaviorDirectory>../Quest Behaviors</BehaviorDirectory>
+	<KillRadius>90</KillRadius>
+	<CodeChunks>
+
+		<!-- Modify Gear Set -->
+
+		<CodeChunk Name="Botanist">
+			<![CDATA[ 
+				ff14bot.Managers.ChatManager.SendChat("/gs change 22");
+		]]>
+		</CodeChunk>
+
+		<!-- End Modify Gear Set -->
+
+		<CodeChunk Name="BTNWeapon">
+			<![CDATA[ 
+				BagSlot EquipSlot = ff14bot.Managers.InventoryManager.GetBagByInventoryBagId(ff14bot.Enums.InventoryBagId.EquippedItems)[ff14bot.Enums.EquipmentSlot.MainHand];
+				
+				foreach(ff14bot.Managers.BagSlot slot in ff14bot.Managers.InventoryManager.FilledInventoryAndArmory)
+				{
+					if(slot.RawItemId == 2545)
+					{
+						slot.Move(EquipSlot);
+					}
+				}
+		]]>
+		</CodeChunk>
+		<CodeChunk Name="BTNWeapon2">
+			<![CDATA[ 
+				BagSlot EquipSlot = ff14bot.Managers.InventoryManager.GetBagByInventoryBagId(ff14bot.Enums.InventoryBagId.EquippedItems)[ff14bot.Enums.EquipmentSlot.MainHand];
+				
+				foreach(ff14bot.Managers.BagSlot slot in ff14bot.Managers.InventoryManager.FilledInventoryAndArmory)
+				{
+					if(slot.RawItemId == 2558)
+					{
+						slot.Move(EquipSlot);
+					}
+				}
+		    ]]>
+		</CodeChunk>
+		<CodeChunk Name="DisableMount">
+			<![CDATA[
+				ff14bot.Settings.CharacterSettings.Instance.UseMount = false;
+		]]>
+		</CodeChunk>
+		<CodeChunk Name="Dismount">
+			<![CDATA[
+				ff14bot.Managers.ActionManager.Dismount();
+		]]>
+		</CodeChunk>
+		<CodeChunk Name="EnableMount">
+			<![CDATA[
+				ff14bot.Settings.CharacterSettings.Instance.UseMount = true;
+		]]>
+		</CodeChunk>
+		<CodeChunk Name="Stealth">
+			<![CDATA[
+				SpellData data;
+				if (!Core.Me.HasAura(47) && ActionManager.CurrentActions.TryGetValue(212, out data) && ActionManager.CanCast(data, Core.Me)) ActionManager.DoAction(212, Core.Me);
+		]]>
+		</CodeChunk>
+		<CodeChunk Name="Triangulate">
+			<![CDATA[ SpellData data;
+			if (!Core.Me.HasAura(217) && ActionManager.CurrentActions.TryGetValue(210, out data) && ActionManager.CanCast(data, Core.Me)) ActionManager.DoAction(210, Core.Me);
+    	]]>
+		</CodeChunk>
+	</CodeChunks>
+	<Order>
+
+		<RunCode Name="Triangulate" />
+
+		<LogMessage Message="Have any problems, let me know on the forums -SNL" />
+
+			<While Condition="Core.Player.ClassLevel &lt; 80">
+				<If Condition="not IsOnMap(613)">
+					<TeleportTo Name="Onokoro" AetheryteId="106" /> <!-- Onokoro -->
+				</If>
+				<ExGather DiscoverUnknowns="true" Loops="0">
+					<GatherObjects>
+						<GatherObject>Mature Tree</GatherObject>
+					</GatherObjects>
+					<Items>
+						<GatherItem Name="Shiitake Mushroom" />
+					</Items>
+						<GatherSpots>
+							<IndirectApproachGatherSpot ApproachLocation="-61.30988, 2.964405, -787.5051" NodeLocation="-58.09113, 3.463745, -787.4418" ReturnToApproachLocation="False" />
+							<IndirectApproachGatherSpot ApproachLocation="70.99847, 1.913971, -779.8019" NodeLocation="72.41409, 3.151178, -776.8186" ReturnToApproachLocation="False" />
+						</GatherSpots>
+					<HotSpots>
+						<HotSpot Radius="85" XYZ="-17.55926, 17.20281, -599.0577" />
+						<HotSpot Radius="60" XYZ="-56.78012, 24.29985, -794.0516" />
+						<HotSpot Radius="75" XYZ="35.75691, 19.90994, -786.094" />
+						<HotSpot Radius="70" XYZ="-7.127731, 31.56856, -776.3493" />
+						<HotSpot Radius="70" XYZ="-74.48386, 31.877, -659.0264" />
+					</HotSpots>
+				</ExGather>
+			</While>
+
+		<If Condition="Core.Player.ClassLevel == 75">
+			<LogMessage Message="You've hit level 75 Botanist? BUT HOW!" />
+			<If Condition="not IsOnMap(129)">
+				<GetTo ZoneId="129" XYZ="-84.08636, 18.60033, -12.41393" /> <!-- Limsa Lominsa Lower Decks -->
+			</If>
+		</If>
+
+	</Order>
+	<GrindAreas>
+	</GrindAreas>
+</Profile>

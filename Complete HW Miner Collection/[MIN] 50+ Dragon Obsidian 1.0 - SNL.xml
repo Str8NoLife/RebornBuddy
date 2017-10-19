@@ -1,0 +1,41 @@
+﻿<!--
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ Profile: [MIN] Dragon Obsidian               
+ Author: Str8_no_life                           
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ Version: 1.0                                     
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+-->
+<Profile>
+
+	<Name>[MIN] 50+ Dragon Obsidian (v1.0) -SNL</Name>
+
+	<Order>			
+
+			<While Condition="Core.Player.ClassLevel &gt; 1">
+				<If Condition="not IsOnMap(397)">
+					<TeleportTo Name="Falcon's Nest" AetheryteId="71" />
+				</If>
+				
+				<ExGather DiscoverUnknowns="true">
+				
+					<GatherObjects>
+						<GatherObject>Mineral Deposit</GatherObject>
+					</GatherObjects>
+					
+					<Items>
+						<GatherItem Name="Dragon Obsidian" />
+					</Items>
+					
+					<HotSpots>
+						<HotSpot Radius="80" XYZ="420.9705, 180.2649, 331.7542" />
+						<HotSpot Radius="80" XYZ="274.302, 181.002, 306.7148" />
+						<HotSpot Radius="80" XYZ="327.1852, 179.2872, 211.2174" />
+					</HotSpots>
+					
+				</ExGather>
+			</While>
+
+	</Order>
+
+</Profile>

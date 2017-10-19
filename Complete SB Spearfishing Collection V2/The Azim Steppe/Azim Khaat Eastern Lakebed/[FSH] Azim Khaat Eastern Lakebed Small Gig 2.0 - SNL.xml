@@ -1,0 +1,60 @@
+﻿<!--
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ Profile: [FSH] Azim Khaat Eastern Lakebed Small Gig               
+ Author: Str8_no_life                           
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ Version: 2.0                                     
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+-->
+<Profile>
+
+	<Name>[FSH] Azim Khaat Eastern Lakebed Small Gig (v2.0) -SNL</Name>
+
+	<CodeChunks>
+		<CodeChunk Name="Wait">
+			<![CDATA[await Coroutine.Sleep(5000);]]>
+		</CodeChunk>
+		
+		<CodeChunk Name="MoveToWater">
+			<![CDATA[
+			if (!MovementManager.IsDiving) 
+			{await ExBuddy.Helpers.Behaviors.MoveTo
+			((new Clio.Utilities.Vector3("155.6909, 3.0, 84.7832")),
+				true,
+				0,
+				0,
+				null
+			);
+			}
+		]]>
+		</CodeChunk>
+	</CodeChunks>
+	
+	<Order>
+
+		<While Condition="Core.Player.ClassLevel &gt; 1">
+				<If Condition="not IsOnMap(622)">
+					<TeleportTo Name="Reunion" AetheryteId="109" />
+				</If>
+					
+				<RunCode Name="MoveToWater"/>
+				<RunCode Name="Wait"/>
+
+			<ExSpearFish GigId="0">
+				
+				<GatherObjects>
+					<GatherObject>Teeming Waters</GatherObject>
+				</GatherObjects>
+					
+				<HotSpots>
+					<HotSpot Radius="90" XYZ="119.768, -66.85364, 64.7401" />
+					<HotSpot Radius="70" XYZ="80.63797, -61.47661, 113.9227" />
+					<HotSpot Radius="70" XYZ="80.99072, -61.92044, 0.3182584" />
+				</HotSpots>
+					
+			</ExSpearFish>
+		</While>
+
+	</Order>
+
+</Profile>

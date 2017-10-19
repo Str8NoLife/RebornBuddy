@@ -1,0 +1,34 @@
+<!--
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ Profile: [Combat] True Griffin Hide 1.0 -SNL               
+ Author: Str8_no_life                           
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ Version: 1.0                                     
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+-->
+<Profile>
+	
+	<Name>True Griffin Hide 1.0 -SNL</Name>
+	
+	<Order>
+		<If Condition="not IsOnMap(620)">
+		<TeleportTo Name="Ala Ghiri" AetheryteId="101" />
+		</If>
+		<Grind while="Core.Player.ClassLevel &gt; 1" grindRef="True Griffin Hide"/>
+	</Order>    
+  
+	<GrindAreas>
+		<GrindArea name="True Griffin Hide">
+		
+		<TargetMobs>
+			<TargetMob Id="5711"/>
+		</TargetMobs>
+		
+		<Hotspots> 
+			<HotSpot name="True Griffin" Radius="300" XYZ="168.8785, 347.8418, 176.2354" />
+		</Hotspots>
+			
+		</GrindArea>	
+	</GrindAreas>
+  
+</Profile>

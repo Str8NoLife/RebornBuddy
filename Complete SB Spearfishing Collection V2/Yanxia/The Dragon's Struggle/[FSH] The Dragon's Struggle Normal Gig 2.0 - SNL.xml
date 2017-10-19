@@ -1,0 +1,58 @@
+﻿<!--
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ Profile: [FSH] The Dragon's Struggle Normal Gig               
+ Author: Str8_no_life                           
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ Version: 2.0                                     
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+-->
+<Profile>
+
+	<Name>[FSH] The Dragon's Struggle Normal Gig (v2.0) -SNL</Name>
+
+	<CodeChunks>
+		<CodeChunk Name="Wait">
+			<![CDATA[await Coroutine.Sleep(5000);]]>
+		</CodeChunk>
+		
+		<CodeChunk Name="MoveToWater">
+			<![CDATA[
+			if (!MovementManager.IsDiving) 
+			{await ExBuddy.Helpers.Behaviors.MoveTo
+			((new Clio.Utilities.Vector3("-490.1256, 0.359023, -457.6235")),
+				true,
+				0,
+				0,
+				null
+			);
+			}
+		]]>
+		</CodeChunk>
+	</CodeChunks>
+	
+	<Order>
+
+		<While Condition="Core.Player.ClassLevel &gt; 1">
+				<If Condition="not IsOnMap(614)">
+					<TeleportTo Name="The House of the Fierce" AetheryteId="108" />
+				</If>
+					
+				<RunCode Name="MoveToWater"/>
+				<RunCode Name="Wait"/>
+
+			<ExSpearFish GigId="1">
+				
+				<GatherObjects>
+					<GatherObject>Teeming Waters</GatherObject>
+				</GatherObjects>
+					
+				<HotSpots>
+					<HotSpot Radius="115" XYZ="-534.2541, -147.5403, -491.8831" />
+				</HotSpots>
+					
+			</ExSpearFish>
+		</While>
+
+	</Order>
+
+</Profile>

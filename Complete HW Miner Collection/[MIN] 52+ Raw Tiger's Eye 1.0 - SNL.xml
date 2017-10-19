@@ -1,0 +1,41 @@
+﻿<!--
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ Profile: [MIN] Raw Tiger's Eye               
+ Author: Str8_no_life                           
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ Version: 1.0                                     
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+-->
+<Profile>
+
+	<Name>[MIN] 52+ Raw Tiger's Eye (v1.0) -SNL</Name>
+
+	<Order>			
+
+			<While Condition="Core.Player.ClassLevel &gt; 1">
+				<If Condition="not IsOnMap(398)">
+					<TeleportTo Name="Tailfeather" AetheryteId="76" />
+				</If>
+				
+				<ExGather DiscoverUnknowns="true">
+				
+					<GatherObjects>
+						<GatherObject>Mineral Deposit</GatherObject>
+					</GatherObjects>
+					
+					<Items>
+						<GatherItem Name="Raw Tiger's Eye" />
+					</Items>
+					
+					<HotSpots>
+						<HotSpot Radius="80" XYZ="260.5408, -82.21555, 411.056" />
+						<HotSpot Radius="80" XYZ="285.3515, -91.88612, 482.4977" />
+						<HotSpot Radius="80" XYZ="149.1102, -104.1779, 505.8996" />
+					</HotSpots>
+					
+				</ExGather>
+			</While>
+
+	</Order>
+
+</Profile>

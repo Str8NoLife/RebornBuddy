@@ -1,0 +1,39 @@
+﻿<!--
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ Profile: [MIN] Lightning Shard               
+ Author: Str8_no_life                           
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ Version: 1.0                                     
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+-->
+<Profile>
+
+	<Name>[MIN] 32+ Lightning Shard (v1.0) -SNL</Name>
+
+	<Order>			
+	
+			<While Condition="Core.Player.ClassLevel &gt; 1">
+				<If Condition="not IsOnMap(146)">
+					<TeleportTo Name="Forgotten Springs" AetheryteId="20" />
+				</If>
+				
+				<ExGather DiscoverUnknowns="true">
+				
+					<GatherObjects>
+						<GatherObject>Mineral Deposit</GatherObject>
+					</GatherObjects>
+					
+					<Items>
+						<GatherItem Name="Lightning Shard" />
+					</Items>
+					
+					<HotSpots>
+						<HotSpot Radius="80" XYZ="174.7494, 5.487629, 931.4534" />
+					</HotSpots>
+
+				</ExGather>
+			</While>
+
+	</Order>
+
+</Profile>

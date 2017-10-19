@@ -1,0 +1,42 @@
+﻿<!--
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ Profile: [MIN] Koppranickel Ore               
+ Author: Str8_no_life                           
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ Version: 1.0                                     
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+-->
+<Profile>
+
+	<Name>[MIN] 63+ Koppranickel Ore (v1.0) -SNL</Name>
+
+	<Order>			
+
+			<While Condition="Core.Player.ClassLevel &gt; 1">
+				<If Condition="not IsOnMap(613)">
+					<TeleportTo Name="Onokoro" AetheryteId="106" />
+				</If>
+				
+					<ExGather DiscoverUnknowns="true" Loops="0">
+					
+					<GatherObjects>
+						<GatherObject>Mineral Deposit</GatherObject>
+					</GatherObjects>
+					
+					<Items>
+						<GatherItem Name="Koppranickel Ore" />
+					</Items>
+					
+					<HotSpots>
+						<HotSpot Radius="40" XYZ="71.52428, 52.94547, 667.7906" />
+						<HotSpot Radius="30" XYZ="211.4656, 45.43921, 699.7892" />
+						<HotSpot Radius="25" XYZ="151.2696, 42.44146, 798.8373" />
+						<HotSpot Radius="20" XYZ="125.5105, 42.14543, 783.9009" />
+					</HotSpots>
+					
+				</ExGather>
+			</While>
+
+	</Order>
+
+</Profile>

@@ -1,0 +1,141 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ Profile: [BTN] Gem Algae               
+ Author: Str8_no_life                           
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ Version: 1.0                                     
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ Required Level: 62                             
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ Required User Interaction:                     
+  None                                          
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ Required Setup:                                
+ Fill out User Configuration below.            
+ Level 62+ Botanist                            
+ Set Botanist Gear Set below.                  
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+-->
+<Profile>
+	<Name>[BTN] 62+ Gem Algae (v1.0) -SNL </Name>
+	<BehaviorDirectory>../Quest Behaviors</BehaviorDirectory>
+	<KillRadius>90</KillRadius>
+	<CodeChunks>
+
+		<!-- Modify Gear Set -->
+
+		<CodeChunk Name="Botanist">
+			<![CDATA[ 
+				ff14bot.Managers.ChatManager.SendChat("/gs change 22");
+		]]>
+		</CodeChunk>
+
+		<!-- End Modify Gear Set -->
+		
+		<CodeChunk Name="Wait">
+			<![CDATA[await Coroutine.Sleep(2500);]]>
+		</CodeChunk>
+		<CodeChunk Name="MoveToWater">
+			<![CDATA[
+			if (!MovementManager.IsDiving) 
+			{await ExBuddy.Helpers.Behaviors.MoveTo
+			((new Clio.Utilities.Vector3("288.9279, -0.4276559, -77.97141")),
+				true,
+				0,
+				0,
+				null
+			);
+			}
+		]]>
+		</CodeChunk>
+		<CodeChunk Name="BTNWeapon">
+			<![CDATA[ 
+				BagSlot EquipSlot = ff14bot.Managers.InventoryManager.GetBagByInventoryBagId(ff14bot.Enums.InventoryBagId.EquippedItems)[ff14bot.Enums.EquipmentSlot.MainHand];
+				
+				foreach(ff14bot.Managers.BagSlot slot in ff14bot.Managers.InventoryManager.FilledInventoryAndArmory)
+				{
+					if(slot.RawItemId == 2545)
+					{
+						slot.Move(EquipSlot);
+					}
+				}
+		]]>
+		</CodeChunk>
+		<CodeChunk Name="BTNWeapon2">
+			<![CDATA[ 
+				BagSlot EquipSlot = ff14bot.Managers.InventoryManager.GetBagByInventoryBagId(ff14bot.Enums.InventoryBagId.EquippedItems)[ff14bot.Enums.EquipmentSlot.MainHand];
+				
+				foreach(ff14bot.Managers.BagSlot slot in ff14bot.Managers.InventoryManager.FilledInventoryAndArmory)
+				{
+					if(slot.RawItemId == 2558)
+					{
+						slot.Move(EquipSlot);
+					}
+				}
+		    ]]>
+		</CodeChunk>
+		<CodeChunk Name="DisableMount">
+			<![CDATA[
+				ff14bot.Settings.CharacterSettings.Instance.UseMount = false;
+		]]>
+		</CodeChunk>
+		<CodeChunk Name="Dismount">
+			<![CDATA[
+				ff14bot.Managers.ActionManager.Dismount();
+		]]>
+		</CodeChunk>
+		<CodeChunk Name="EnableMount">
+			<![CDATA[
+				ff14bot.Settings.CharacterSettings.Instance.UseMount = true;
+		]]>
+		</CodeChunk>
+		<CodeChunk Name="Stealth">
+			<![CDATA[
+				SpellData data;
+				if (!Core.Me.HasAura(47) && ActionManager.CurrentActions.TryGetValue(212, out data) && ActionManager.CanCast(data, Core.Me)) ActionManager.DoAction(212, Core.Me);
+		]]>
+		</CodeChunk>
+		<CodeChunk Name="Triangulate">
+			<![CDATA[ SpellData data;
+			if (!Core.Me.HasAura(217) && ActionManager.CurrentActions.TryGetValue(210, out data) && ActionManager.CanCast(data, Core.Me)) ActionManager.DoAction(210, Core.Me);
+    	]]>
+		</CodeChunk>
+	</CodeChunks>
+	<Order>
+
+		<RunCode Name="Triangulate" />
+
+		<LogMessage Message="Have any problems, let me know on the forums -SNL" />
+
+			<While Condition="Core.Player.ClassLevel &lt; 80">
+				<If Condition="not IsOnMap(620)">
+					<TeleportTo Name="Onokoro" AetheryteId="106" /> <!-- Onokoro -->
+				</If>
+				<RunCode Name="MoveToWater"/>
+				<RunCode Name="Wait"/>
+				<ExGather DiscoverUnknowns="true" Loops="0">
+					<GatherObjects>
+						<GatherObject>Lush Vegetation Patch</GatherObject>
+					</GatherObjects>
+					<Items>
+						<GatherItem Name="Gem Algae" />
+					</Items>
+					<HotSpots>
+						<HotSpot Radius="80" XYZ="280.4083, -43.65251, -37.44692" />
+						<HotSpot Radius="80" XYZ="274.4963, -91.48736, 98.58102" />
+					</HotSpots>
+				</ExGather>
+			</While>
+
+		<If Condition="Core.Player.ClassLevel == 75">
+			<LogMessage Message="You've hit level 75 Botanist? BUT HOW!" />
+			<If Condition="not IsOnMap(129)">
+				<GetTo ZoneId="129" XYZ="-84.08636, 18.60033, -12.41393" /> <!-- Limsa Lominsa Lower Decks -->
+			</If>
+		</If>
+
+	</Order>
+	<GrindAreas>
+	</GrindAreas>
+</Profile>

@@ -1,0 +1,67 @@
+﻿<!--
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ Profile: [MIN] Diatomite               
+ Author: Str8_no_life                           
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ Version: 1.0                                     
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+-->
+<Profile>
+
+	<Name>[MIN] 63+ Diatomite (v1.0) -SNL</Name>
+
+	<CodeChunks>
+		<CodeChunk Name="Wait">
+			<![CDATA[await Coroutine.Sleep(2500);]]>
+		</CodeChunk>
+		
+		<CodeChunk Name="MoveToWater">
+			<![CDATA[
+			if (!MovementManager.IsDiving) 
+			{await ExBuddy.Helpers.Behaviors.MoveTo
+			((new Clio.Utilities.Vector3("-388.1517, 2.582828, -241.853")),
+				true,
+				0,
+				0,
+				null
+			);
+			}
+		]]>
+		</CodeChunk>
+	</CodeChunks>
+	
+	<Order>			
+
+			<While Condition="Core.Player.ClassLevel &gt; 1">
+				<If Condition="not IsOnMap(613)">
+					<TeleportTo Name="Onokoro" AetheryteId="106" />
+				</If>
+				
+				<RunCode Name="MoveToWater"/>
+				<RunCode Name="Wait"/>
+				
+					<ExGather DiscoverUnknowns="true" Loops="0">
+					
+					<GatherObjects>
+						<GatherObject>Rocky Outcrop</GatherObject>
+					</GatherObjects>
+					
+					<Items>
+						<GatherItem Name="Diatomite" />
+					</Items>
+					
+					<HotSpots>
+						<HotSpot Radius="30" XYZ="-362.1759, -113.201, -259.1121" />
+						<HotSpot Radius="30" XYZ="-380.7545, -134.1357, -27.90677" />
+						<HotSpot Radius="40" XYZ="-457.9306, -124.6168, -88.09926" />
+						<HotSpot Radius="30" XYZ="-526.9216, -106.2195, -156.5371" />
+						<HotSpot Radius="30" XYZ="-541.0518, -89.15219, -217.2591" />
+						<HotSpot Radius="30" XYZ="-424.2001, -100.3914, -309.9713" />
+					</HotSpots>
+					
+				</ExGather>
+			</While>
+
+	</Order>
+
+</Profile>

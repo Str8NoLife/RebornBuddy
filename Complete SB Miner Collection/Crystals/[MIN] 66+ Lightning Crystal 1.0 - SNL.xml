@@ -1,0 +1,45 @@
+﻿<!--
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ Profile: [MIN] Lightning Crystal               
+ Author: Str8_no_life                           
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ Version: 1.0                                     
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+-->
+<Profile>
+
+	<Name>[MIN] 66+ Lightning Crystal (v1.0) -SNL</Name>
+
+	<Order>			
+
+			<While Condition="Core.Player.ClassLevel &gt; 1">
+				<If Condition="not IsOnMap(622)">
+					<TeleportTo Name="Reunion" AetheryteId="109" />
+				</If>
+				
+					<ExGather DiscoverUnknowns="true" Loops="0">
+					
+					<GatherObjects>
+						<GatherObject>Rocky Outcrop</GatherObject>
+					</GatherObjects>
+					
+					<Items>
+						<GatherItem Name="Lightning Crystal" />
+					</Items>
+					
+					<HotSpots>
+						<HotSpot Radius="40" XYZ="419.2564, 16.34953, -166.1048" />
+						<HotSpot Radius="40" XYZ="373.4164, 52.75865, -203.717" />
+						<HotSpot Radius="40" XYZ="334.7934, 66.58905, -314.4596" />
+						<HotSpot Radius="40" XYZ="343.4978, 50.44851, -367.8856" />
+						<HotSpot Radius="40" XYZ="426.9573, 55.88378, -402.6556" />
+						<HotSpot Radius="20" XYZ="469.9637, 70.48321, -375.4854" />
+						<HotSpot Radius="20" XYZ="479.5824, 40.15959, -366.4579" />	
+					</HotSpots>
+					
+				</ExGather>
+			</While>
+
+	</Order>
+
+</Profile>

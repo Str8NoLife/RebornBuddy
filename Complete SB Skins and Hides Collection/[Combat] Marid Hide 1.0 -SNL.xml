@@ -1,0 +1,34 @@
+<!--
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ Profile: [Combat] Marid Hide 1.0 -SNL               
+ Author: Str8_no_life                           
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ Version: 1.0                                     
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+-->
+<Profile>
+	
+	<Name>Marid Hide 1.0 -SNL</Name>
+	
+	<Order>
+		<If Condition="not IsOnMap(622)">
+		<TeleportTo Name="Reunion" AetheryteId="109" />
+		</If>
+		<Grind while="Core.Player.ClassLevel &gt; 1" grindRef="Marid Hide"/>
+	</Order>    
+  
+	<GrindAreas>
+		<GrindArea name="Marid Hide">
+		
+		<TargetMobs>
+			<TargetMob Id="5781"/>
+		</TargetMobs>
+		
+		<Hotspots> 
+			<HotSpot name="Mammoth" Radius="300" XYZ="358.022, 35.89423, -203.6772" />
+		</Hotspots>
+			
+		</GrindArea>	
+	</GrindAreas>
+  
+</Profile>

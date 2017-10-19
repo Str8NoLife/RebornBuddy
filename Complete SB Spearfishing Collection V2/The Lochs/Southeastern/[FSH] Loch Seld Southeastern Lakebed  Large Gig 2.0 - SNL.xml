@@ -1,0 +1,61 @@
+﻿<!--
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ Profile: [FSH] Loch Seld Southeastern Lakebed Large Gig               
+ Author: Str8_no_life                           
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ Version: 2.0                                     
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+-->
+<Profile>
+
+	<Name>[FSH] Loch Seld Southeastern Lakebed Large Gig (v2.0) -SNL</Name>
+
+	<CodeChunks>
+		<CodeChunk Name="Wait">
+			<![CDATA[await Coroutine.Sleep(5000);]]>
+		</CodeChunk>
+		
+		<CodeChunk Name="MoveToWater">
+			<![CDATA[
+			if (!MovementManager.IsDiving) 
+			{await ExBuddy.Helpers.Behaviors.MoveTo
+			((new Clio.Utilities.Vector3("163.9591, 0.8621447, 256.8645")),
+				true,
+				0,
+				0,
+				null
+			);
+			}
+		]]>
+		</CodeChunk>
+	</CodeChunks>
+	
+	<Order>
+
+		<While Condition="Core.Player.ClassLevel &gt; 1">
+				<If Condition="not IsOnMap(621)">
+					<TeleportTo Name="Port Praetoria" AetheryteId="102" />
+				</If>
+					
+				<RunCode Name="MoveToWater"/>
+				<RunCode Name="Wait"/>
+
+			<ExSpearFish GigId="2">
+				
+				<GatherObjects>
+					<GatherObject>Teeming Waters</GatherObject>
+				</GatherObjects>
+					
+				<HotSpots>
+					<HotSpot Radius="15" XYZ="253.9742, -268.6767, 378.9186" />
+					<HotSpot Radius="15" XYZ="259.6431, -268.0861, 362.63" />
+					<HotSpot Radius="50" XYZ="229.4312, -246.4269, 335.5065" />
+					<HotSpot Radius="50" XYZ="169.7381, -255.5097, 398.4892" />
+				</HotSpots>
+					
+			</ExSpearFish>
+		</While>
+
+	</Order>
+
+</Profile>

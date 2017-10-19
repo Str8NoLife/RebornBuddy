@@ -1,0 +1,41 @@
+﻿<!--
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ Profile: [MIN] Grade 5 Carbonized Matter               
+ Author: Str8_no_life                           
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ Version: 1.0                                     
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+-->
+<Profile>
+
+	<Name>[MIN] 60+ Grade 5 Carbonized Matter (v1.0) -SNL</Name>
+
+	<Order>			
+
+			<While Condition="Core.Player.ClassLevel &gt; 1">
+				<If Condition="not IsOnMap(398)">
+					<TeleportTo Name="Tailfeather" AetheryteId="76" />
+				</If>
+				
+				<ExGather DiscoverUnknowns="true">
+				
+					<GatherObjects>
+						<GatherObject>Mineral Deposit</GatherObject>
+					</GatherObjects>
+					
+					<Items>
+						<GatherItem Name="Grade 5 Carbonized Matter" />
+					</Items>
+					
+					<HotSpots>
+						<HotSpot Radius="80" XYZ="-140.9688, -18.63354, 221.6456" />
+						<HotSpot Radius="80" XYZ="-157.3246, -47.89426, 384.6017" />
+						<HotSpot Radius="80" XYZ="-285.4629, -35.24951, 330.5119" />
+					</HotSpots>
+					
+				</ExGather>
+			</While>
+
+	</Order>
+
+</Profile>

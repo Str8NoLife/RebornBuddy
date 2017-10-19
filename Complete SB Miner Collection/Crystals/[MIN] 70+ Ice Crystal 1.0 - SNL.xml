@@ -1,0 +1,41 @@
+﻿<!--
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ Profile: [MIN] Ice Crystal              
+ Author: Str8_no_life                           
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ Version: 1.0                                     
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+-->
+<Profile>
+
+	<Name>[MIN] 70+ Ice Crystal (v1.0) -SNL</Name>
+
+	<Order>			
+
+			<While Condition="Core.Player.ClassLevel &gt; 1">
+				<If Condition="not IsOnMap(621)">
+					<TeleportTo Name="Port Praetoria" AetheryteId="102" />
+				</If>
+				
+					<ExGather DiscoverUnknowns="true" Loops="0">
+					
+					<GatherObjects>
+						<GatherObject>Mineral Deposit</GatherObject>
+					</GatherObjects>
+					
+					<Items>
+						<GatherItem Name="Ice Crystal" />
+					</Items>
+					
+					<HotSpots>
+						<HotSpot Radius="60" XYZ="-549.9714, 42.15146, -160.9029" />
+						<HotSpot Radius="60" XYZ="-526.4672, 40.9883, -299.1078" />
+						<HotSpot Radius="25" XYZ="-394.5909, 23.23386, -267.2029" />
+					</HotSpots>
+					
+				</ExGather>
+			</While>
+
+	</Order>
+
+</Profile>

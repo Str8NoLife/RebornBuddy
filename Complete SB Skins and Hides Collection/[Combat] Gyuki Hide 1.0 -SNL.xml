@@ -1,0 +1,34 @@
+<!--
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ Profile: [Combat] Gyuki Hide 1.0 -SNL               
+ Author: Str8_no_life                           
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ Version: 1.0                                     
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+-->
+<Profile>
+	
+	<Name>Gyuki Hide 1.0 -SNL</Name>
+	
+	<Order>
+		<If Condition="not IsOnMap(613)">
+		<TeleportTo Name="Onokoro" AetheryteId="106" />
+		</If>
+		<Grind while="Core.Player.ClassLevel &gt; 1" grindRef="Gyuki Hide"/>
+	</Order>    
+  
+	<GrindAreas>
+		<GrindArea name="Gyuki Hide">
+		
+		<TargetMobs>
+			<TargetMob Id="5734"/>
+		</TargetMobs>
+		
+		<Hotspots> 
+			<HotSpot name="Gyuki" Radius="300" XYZ="-265.4627, 32.00015, -545.9669" />
+		</Hotspots>
+			
+		</GrindArea>	
+	</GrindAreas>
+  
+</Profile>

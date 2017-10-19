@@ -1,0 +1,41 @@
+﻿<!--
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ Profile: [MIN] Ice Crystal               
+ Author: Str8_no_life                           
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ Version: 1.0                                     
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+-->
+<Profile>
+
+	<Name>[MIN] 53+ Ice Crystal (v1.0) -SNL</Name>
+
+	<Order>			
+
+			<While Condition="Core.Player.ClassLevel &gt; 1">
+				<If Condition="not IsOnMap(397)">
+					<TeleportTo Name="Falcon's Nest" AetheryteId="71" />
+				</If>
+				
+				<ExGather DiscoverUnknowns="true">
+				
+					<GatherObjects>
+						<GatherObject>Mineral Deposit</GatherObject>
+					</GatherObjects>
+					
+					<Items>
+						<GatherItem Name="Ice Crystal" />
+					</Items>
+					
+					<HotSpots>
+						<HotSpot Radius="80" XYZ="449.5495, 176.7934, -460.7525" />
+						<HotSpot Radius="80" XYZ="349.7478, 179.918, -522.9662" />
+						<HotSpot Radius="80" XYZ="503.0547, 179.206, -518.1918" />
+					</HotSpots>
+					
+				</ExGather>
+			</While>
+
+	</Order>
+
+</Profile>

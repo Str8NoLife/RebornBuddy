@@ -1,0 +1,48 @@
+﻿<!--
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ Profile: [MIN] Serpentine              
+ Author: Str8_no_life                           
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ Version: 1.0                                     
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+-->
+<Profile>
+
+	<Name>[MIN] 68+ Serpentine (v1.0) -SNL</Name>
+
+	<Order>			
+
+			<While Condition="Core.Player.ClassLevel &gt; 1">
+				<If Condition="not IsOnMap(614)">
+					<TeleportTo Name="Namai" AetheryteId="107" />
+				</If>
+				
+					<ExGather DiscoverUnknowns="true" Loops="0">
+					
+					<GatherObjects>
+						<GatherObject>Mineral Deposit</GatherObject>
+					</GatherObjects>
+					
+					<Items>
+						<GatherItem Name="Serpentine" />
+					</Items>
+					
+					<HotSpots>
+						<HotSpot Radius="6" XYZ="712.7625, 117.9562, -115.2821" />
+						<HotSpot Radius="20" XYZ="798.8716, 144.4576, 10.81555" />
+						<HotSpot Radius="5" XYZ="820.1207, 146.0891, 17.06134" />
+						<HotSpot Radius="10" XYZ="839.6823, 150.7529, 18.53859" />
+						<HotSpot Radius="30" XYZ="884.7139, 155.4912, -136.0828" />
+						<HotSpot Radius="15" XYZ="728.0602, 118.3394, -116.156" />
+					</HotSpots>
+					
+					<GatheringSkillOrder>
+						<GatheringSkill SpellName="Unearth II" TimesToCast="1"/>
+					</GatheringSkillOrder>
+					
+				</ExGather>
+			</While>
+
+	</Order>
+
+</Profile>

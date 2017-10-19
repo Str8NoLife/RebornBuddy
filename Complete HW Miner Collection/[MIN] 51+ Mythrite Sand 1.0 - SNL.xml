@@ -1,0 +1,41 @@
+﻿<!--
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ Profile: [MIN] Mythrite Sand               
+ Author: Str8_no_life                           
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ Version: 1.0                                     
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+-->
+<Profile>
+
+	<Name>[MIN] 51+ Mythrite Sand (v1.0) -SNL</Name>
+
+	<Order>			
+
+			<While Condition="Core.Player.ClassLevel &gt; 1">
+				<If Condition="not IsOnMap(397)">
+					<TeleportTo Name="Falcon's Nest" AetheryteId="71" />
+				</If>
+				
+				<ExGather DiscoverUnknowns="true">
+				
+					<GatherObjects>
+						<GatherObject>Rocky Outcrop</GatherObject>
+					</GatherObjects>
+					
+					<Items>
+						<GatherItem Name="Mythrite Sand" />
+					</Items>
+					
+					<HotSpots>
+						<HotSpot Radius="100" XYZ="-237.2874, 101.8346, -470.6141" />
+						<HotSpot Radius="100" XYZ="-341.3557, 102.5196, -476.5671" />
+						<HotSpot Radius="100" XYZ="-328.3733, 104.0474, -590.9955" />
+					</HotSpots>
+					
+				</ExGather>
+			</While>
+
+	</Order>
+
+</Profile>

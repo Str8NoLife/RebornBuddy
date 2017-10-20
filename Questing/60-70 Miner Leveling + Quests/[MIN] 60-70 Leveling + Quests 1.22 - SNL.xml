@@ -425,6 +425,7 @@
 					<GatherSpots>
 						<StealthApproachGatherSpot StealthLocation="592.3048, 84.94736, 44.7973" ApproachLocation="593.1407, 85.90386, 49.56032" NodeLocation="594.0188, 87.54358, 51.05505" />
 						<IndirectApproachGatherSpot ApproachLocation="606.2719, 93.28471, 79.42535" NodeLocation="608.4475, 94.5528, 80.633" />
+						<IndirectApproachGatherSpot ApproachLocation="572.7186, 90.60042, 112.8349" NodeLocation="576.0488, 91.74075, 114.4922" />
 					</GatherSpots>
 					<HotSpots>
 						<HotSpot Radius="40" XYZ="503.9793, 67.83667, -63.21317" />

@@ -1,10 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <!--
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
- Profile: [MIN] 60-70 Leveling + Quests 1.21 - SNL              
+ Profile: [MIN] 60-70 Leveling + Quests 1.22 - SNL              
  Author: Str8_no_life                           
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
- Version: 1.21                                     
+ Version: 1.22                                     
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
  Required Level: 60                             
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -18,7 +18,7 @@
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 -->
 <Profile>
-	<Name>[MIN] 60-70 Leveling + Quests 1.21 - SNL </Name>
+	<Name>[MIN] 60-70 Leveling + Quests 1.22 - SNL </Name>
 	<BehaviorDirectory>../Quest Behaviors</BehaviorDirectory>
 	<KillRadius>90</KillRadius>
 	<CodeChunks>
@@ -422,6 +422,10 @@
 					<Items>
 						<GatherItem Name="Doman Iron Ore" />
 					</Items>
+					<GatherSpots>
+						<StealthApproachGatherSpot StealthLocation="592.3048, 84.94736, 44.7973" ApproachLocation="593.1407, 85.90386, 49.56032" NodeLocation="594.0188, 87.54358, 51.05505" />
+						<IndirectApproachGatherSpot ApproachLocation="606.2719, 93.28471, 79.42535" NodeLocation="608.4475, 94.5528, 80.633" />
+					</GatherSpots>
 					<HotSpots>
 						<HotSpot Radius="40" XYZ="503.9793, 67.83667, -63.21317" />
 						<HotSpot Radius="20" XYZ="589.9658, 104.419, 49.58293" />

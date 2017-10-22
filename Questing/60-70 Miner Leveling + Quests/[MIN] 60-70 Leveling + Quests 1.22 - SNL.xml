@@ -624,24 +624,24 @@
 			</If>
 			<If Condition="HasQuest(68094)">
 				<If Condition="GetQuestStep(68094) == 3">
-				<If Condition="not HasAtLeast(17944,5)">
+				<If Condition="not HqHasAtLeast(17944,5)">
 					<If Condition="not IsOnMap(613)">
 						<TeleportTo Name="Onokoro" AetheryteId="100" />
 					</If>
 					<If Condition="GetQuestStep(68094) == 3">
 					<NoCombatMoveTo XYZ="272.1143, 155.6661, -464.4753" />
-						<ExGather DiscoverUnknowns="false" while="not HasAtLeast(17944,5)">
+						<ExGather DiscoverUnknowns="false" while="not HqHasAtLeast(17944,5)">
 						<GatherObjects>
 							<GatherObject>Unspoiled Mineral Deposit</GatherObject>
 						</GatherObjects>
 						<Items>
-							<GatherItem Name="pummelite" />
+							<GatherItem Name="Pummelite" />
 						</Items>
 						<HotSpots>
 							<HotSpot Radius="100" XYZ="272.1143, 155.6661, -464.4753" />
 						</HotSpots>
 						<GatheringSkillOrder>
-							<GatheringSkill SpellName="Kings Yield II" TimesToCast="2" />
+							<GatheringSkill SpellName="King's Yield II" TimesToCast="2" />
 						</GatheringSkillOrder>
 						<Slot>6</Slot>
 						</ExGather>
@@ -649,13 +649,13 @@
 				</If>
 				</If>
 			</If>
-			<If Condition="HasAtLeast(17944,5)">
+			<If Condition="HqHasAtLeast(17944,5)">
 				<If Condition="GetQuestStep(68094) == 3">
 					<If Condition="not IsOnMap(478)">
 						<GetTo ZoneId="478" XYZ="81.49841, 214.1, -92.94275" />
 					</If>
 					<If Condition="GetQuestStep(68094) == 3">
-						<TurnIn ItemId="17944" RequiresHq="false" QuestId="68094" StepId="3" NpcId="1019867" XYZ="81.49841, 214.1, -92.94275" />
+						<TurnIn ItemId="17944" RequiresHq="true" QuestId="68094" StepId="3" NpcId="1019867" XYZ="81.49841, 214.1, -92.94275" />
 					</If>
 				</If>
 			</If>

@@ -1,0 +1,157 @@
+﻿<!--
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ Profile: [FSH] 60-70 Leveling 1.0 - SNL                
+ Author: Str8_no_life                           
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ Version: 1.0                                     
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+-->
+<Profile>
+
+	<Name>[FSH] 60-70 Leveling 1.0 - SNL</Name>
+
+	<Order>			
+
+			<While Condition="Core.Player.ClassLevel &lt; 63">
+			
+				<If Condition="not HasAtLeast(20613,198)">
+				<LogMessage Message="Buying more Salmon Roe!" />
+				<GetTo ZoneId="635" XYZ="73.0144, 0.04551338, -9.903137" />
+				<BuyItem ItemId="20613" ItemCount="198" DialogOption="9" NpcId="1019443" XYZ="73.0144, 0.04551338, -9.903137" />			
+				</If>
+				
+				<While Condition="IsTimeBetween(0,12)">
+				<If Condition="not IsOnMap(612)">
+					<TeleportTo Name="Castrum Oriens" AetheryteId="98" />
+				</If>
+				
+				<ExFish Mooch="0" Baits="Salmon Roe" MinFish="20" MaxFish="30" ShuffleFishSpots="True" Condition="IsTimeBetween(0,12)">
+				
+					<FishSpots>
+						<FishSpot XYZ="-171.2814, 59.03613, -551.7431" Heading="6.262631" />
+						<FishSpot XYZ="-155.9959, 59.0156, -555.6502" Heading="1.326144" />
+						<FishSpot XYZ="-157.5301, 59.11721, -577.2796" Heading="2.113637" />
+						<FishSpot XYZ="-186.7919, 59.16378, -565.7137" Heading="5.121189" />
+						<FishSpot XYZ="-170.2625, 59.20676, -590.7089" Heading="3.130844" />
+						<FishSpot XYZ="-187.2989, 58.95827, -585.963" Heading="4.194798" />
+					</FishSpots>
+					
+				</ExFish>
+				</While>
+					
+				<While Condition="IsTimeBetween(12,24)">
+				<If Condition="not IsOnMap(620)">
+					<TeleportTo Name="Ala Gannha" AetheryteId="100" />
+				</If>
+				<ExFish Mooch="0" Baits="Salmon Roe" MinFish="20" MaxFish="30" ShuffleFishSpots="True" Condition="IsTimeBetween(12,24)">
+				
+					<FishSpots>
+						<FishSpot XYZ="182.245, 116.6021, -725.4677" Heading="1.244372" />
+						<FishSpot XYZ="177.6436, 116.9895, -707.4113" Heading="1.583668" />
+						<FishSpot XYZ="179.5742, 116.5212, -680.5295" Heading="1.533405" />
+						<FishSpot XYZ="158.6391, 116.1967, -655.715" Heading="0.6856862" />
+						<FishSpot XYZ="136.7711, 115.8216, -649.148" Heading="6.278759" />
+						<FishSpot XYZ="195.0902, 116.1076, -738.6669" Heading="1.055337" />
+					</FishSpots>
+					
+				</ExFish>
+				</While>
+			</While>
+		
+			<While Condition="Core.Player.ClassLevel &lt; 65">
+			
+				<If Condition="not HasAtLeast(20617,198)">
+				<LogMessage Message="Buying more Live Shrimp!" />
+				<GetTo ZoneId="613" XYZ="93.21729, 2.087148, -612.3598" />
+				<BuyItem ItemId="20617" ItemCount="198" DialogOption="6" NpcId="1021501" XYZ="93.21729, 2.087148, -612.3598" />					
+				</If>
+				
+				<While Condition="IsTimeBetween(0,18)">
+				<If Condition="not IsOnMap(613)">
+					<TeleportTo Name="Onokoro" AetheryteId="106" />
+				</If>
+								
+				<ExFish Mooch="0" Baits="Live Shrimp" MinFish="20" MaxFish="30" ShuffleFishSpots="True" Condition="IsTimeBetween(0,18)">
+				
+					<FishSpots>
+						<FishSpot XYZ="208.5496, 1.151003, -571.2318" Heading="1.078346" />
+						<FishSpot XYZ="187.7277, 1.151003, -580.9881" Heading="5.757235" />
+						<FishSpot XYZ="171.6746, 1.155661, -594.4166" Heading="2.502546" />
+						<FishSpot XYZ="153.3574, 1.185595, -501.3376" Heading="1.501421" />
+						<FishSpot XYZ="141.7825, 1.185595, -515.8168" Heading="2.293103" />
+						<FishSpot XYZ="133.7921, 1.185595, -518.5287" Heading="5.417941" />
+					</FishSpots>
+					
+				</ExFish>
+				</While>
+				
+				<While Condition="IsTimeBetween(18,24)">
+				<If Condition="not IsOnMap(628)">
+					<TeleportTo Name="Kugane" AetheryteId="111" />
+				</If>
+								
+				<ExFish Mooch="0" Baits="Live Shrimp" MinFish="20" MaxFish="30" ShuffleFishSpots="True" Condition="IsTimeBetween(18,24)">
+				
+					<FishSpots>
+						<FishSpot XYZ="-172.5674, -4.999995, 161.9869" Heading="4.720765" />
+						<FishSpot XYZ="-172.682, -4.999995, 149.9967" Heading="4.708196" />
+						<FishSpot XYZ="-164.4506, -4.999995, 141.7702" Heading="3.11855" />
+						<FishSpot XYZ="-147.1761, -7.912991, 142.0081" Heading="3.36359" />
+					</FishSpots>
+					
+				</ExFish>
+				</While>
+			</While>
+			
+			<While Condition="Core.Player.ClassLevel &lt; 71">
+			
+				<If Condition="not HasAtLeast(20615,198)">
+				<LogMessage Message="Buying more Live Shrimp!" />
+				<GetTo ZoneId="622" XYZ="550.5682, -19.50565, 374.4868" />
+				<BuyItem ItemId="20615" ItemCount="198" InteractDistance="3" NpcId="1019340" XYZ="550.5682, -19.50565, 374.4868" />					
+				</If>
+				
+				<While Condition="IsTimeBetween(0,12)">
+				<If Condition="not IsOnMap(622)">
+					<TeleportTo Name="Reunion" AetheryteId="109" />
+				</If>
+								
+				<ExFish Mooch="0" Baits="Midge Larva" MinFish="20" MaxFish="30" ShuffleFishSpots="True" Condition="IsTimeBetween(0,12)">
+				
+					<FishSpots>
+						<FishSpot XYZ="37.58942, 29.26448, -69.45775" Heading="6.278534" />
+						<FishSpot XYZ="64.34319, 26.42458, -77.88664" Heading="0.2445731" />
+						<FishSpot XYZ="93.71629, 19.31703, -77.07215" Heading="5.928901" />
+						<FishSpot XYZ="122.6192, 17.68547, -67.73275" Heading="6.199062" />
+						<FishSpot XYZ="141.7631, 18.73909, -49.15645" Heading="5.401084" />
+					</FishSpots>
+					
+				</ExFish>
+				</While>
+				
+				<While Condition="IsTimeBetween(12,24)">
+				<If Condition="not IsOnMap(614)">
+					<TeleportTo Name="Namai" AetheryteId="107" />
+				</If>
+								
+				<ExFish Mooch="0" Baits="Midge Larva" MinFish="20" MaxFish="30" ShuffleFishSpots="True" Condition="IsTimeBetween(12,24)">
+				
+					<FishSpots>
+						<FishSpot XYZ="37.65363, -0.3000003, 249.0466" Heading="3.335762" />
+						<FishSpot XYZ="14.18825, -0.3000013, 268.0768" Heading="4.180882" />
+						<FishSpot XYZ="8.493781, -0.3, 304.1941" Heading="4.675157" />
+						<FishSpot XYZ="7.392684, -0.3, 338.4767" Heading="4.920193" />
+						<FishSpot XYZ="0.5870692, -0.3000023, 371.644" Heading="4.304006" />
+					</FishSpots>
+					
+				</ExFish>
+				</While>
+			</While>
+			
+			<If Condition="Core.Player.ClassLevel == 70">
+				<LogMessage Message="Congrats! You've hit level 70 Fisher" />
+			</If>
+
+	</Order>
+
+</Profile>

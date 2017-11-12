@@ -103,7 +103,7 @@
 				</While>
 			</While>
 			
-			<While Condition="Core.Player.ClassLevel &lt; 71">
+			<While Condition="Core.Player.ClassLevel &lt; 70">
 			
 				<If Condition="not HasAtLeast(20615,198)">
 				<LogMessage Message="Buying more Live Shrimp!" />

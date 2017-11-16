@@ -3,12 +3,12 @@
  Profile: [MIN] Lightning Crystal               
  Author: Str8_no_life                           
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
- Version: 1.0                                     
+ Version: 1.1                                     
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 -->
 <Profile>
 
-	<Name>[MIN] 66+ Lightning Crystal (v1.0) -SNL</Name>
+	<Name>[MIN] 66+ Lightning Crystal (v1.1) -SNL</Name>
 
 	<Order>			
 
@@ -17,7 +17,7 @@
 					<TeleportTo Name="Reunion" AetheryteId="109" />
 				</If>
 				
-					<ExGather DiscoverUnknowns="true" Loops="0">
+					<ExGather DiscoverUnknowns="true">
 					
 					<GatherObjects>
 						<GatherObject>Rocky Outcrop</GatherObject>
@@ -27,6 +27,10 @@
 						<GatherItem Name="Lightning Crystal" />
 					</Items>
 					
+					<GatherSpots>
+						<IndirectApproachGatherSpot ApproachLocation="572.7186, 90.60042, 112.8349" NodeLocation="576.0488, 91.74075, 114.4922" />
+					</GatherSpots>
+					
 					<HotSpots>
 						<HotSpot Radius="40" XYZ="419.2564, 16.34953, -166.1048" />
 						<HotSpot Radius="40" XYZ="373.4164, 52.75865, -203.717" />
@@ -34,7 +38,7 @@
 						<HotSpot Radius="40" XYZ="343.4978, 50.44851, -367.8856" />
 						<HotSpot Radius="40" XYZ="426.9573, 55.88378, -402.6556" />
 						<HotSpot Radius="20" XYZ="469.9637, 70.48321, -375.4854" />
-						<HotSpot Radius="20" XYZ="479.5824, 40.15959, -366.4579" />	
+						<HotSpot Radius="30" XYZ="478.5622, 35.90757, -351.4582" />
 					</HotSpots>
 					
 				</ExGather>

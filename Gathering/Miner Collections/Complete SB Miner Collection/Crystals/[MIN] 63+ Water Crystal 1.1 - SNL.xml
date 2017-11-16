@@ -1,30 +1,30 @@
 ﻿<!--
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
- Profile: [MIN] Feather Iron Ore               
+ Profile: [MIN] Water Crystal               
  Author: Str8_no_life                           
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
- Version: 1.0                                     
+ Version: 1.1                                     
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
- -->
+-->
 <Profile>
 
-	<Name>[MIN] 65+ Feather Iron Ore (v1.0) -SNL</Name>
+	<Name>[MIN] 63+ Water Crystal (v1.1) -SNL</Name>
 
 	<Order>			
 
 			<While Condition="Core.Player.ClassLevel &gt; 1">
-				<If Condition="not IsOnMap(613)">
+				<If Condition="not IsOnMap(620)">
 					<TeleportTo Name="Onokoro" AetheryteId="106" />
 				</If>
 				
-					<ExGather DiscoverUnknowns="true" Loops="0">
+					<ExGather DiscoverUnknowns="true">
 					
 					<GatherObjects>
 						<GatherObject>Mineral Deposit</GatherObject>
 					</GatherObjects>
 					
 					<Items>
-						<GatherItem Name="Feather Iron Ore" />
+						<GatherItem Name="Water Crystal" />
 					</Items>
 					
 					<HotSpots>
@@ -33,10 +33,6 @@
 						<HotSpot Radius="25" XYZ="151.2696, 42.44146, 798.8373" />
 						<HotSpot Radius="20" XYZ="125.5105, 42.14543, 783.9009" />
 					</HotSpots>
-					
-					<GatheringSkillOrder>
-						<GatheringSkill SpellName="Unearth II" TimesToCast="1"/>
-					</GatheringSkillOrder>
 					
 				</ExGather>
 			</While>

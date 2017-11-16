@@ -1,31 +1,35 @@
 ﻿<!--
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
- Profile: [MIN] Wind Crystal               
+ Profile: [MIN] Gyr Abanian Mineral Water               
  Author: Str8_no_life                           
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
- Version: 1.0                                     
+ Version: 1.1                                     
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 -->
 <Profile>
 
-	<Name>[MIN] 61+ Wind Crystal (v1.0) -SNL</Name>
+	<Name>[MIN] 61+ Gyr Abanian Mineral Water (v1.1) -SNL</Name>
 
 	<Order>			
 
 			<While Condition="Core.Player.ClassLevel &gt; 1">
 				<If Condition="not IsOnMap(612)">
-					<TeleportTo Name="Castrum Oriens" AetheryteId="98" />
+					<TeleportTo Name="Castrum Oriens" AetheryteId="98" /> 
 				</If>
 				
-					<ExGather DiscoverUnknowns="true" Loops="0">
+					<ExGather DiscoverUnknowns="true">
 					
 					<GatherObjects>
 						<GatherObject>Mineral Deposit</GatherObject>
 					</GatherObjects>
 					
 					<Items>
-						<GatherItem Name="Wind Crystal" />
+						<GatherItem Name="Gyr Abanian Mineral Water" />
 					</Items>
+					
+					<GatherSpots>
+						<IndirectApproachGatherSpot ApproachLocation="91.08487, 48.65793, -407.4059" NodeLocation="90.52106, 49.82163, -409.1239" />
+					</GatherSpots>
 					
 					<HotSpots>
 						<HotSpot Radius="26" XYZ="93.27251, 71.54698, -395.6156" />

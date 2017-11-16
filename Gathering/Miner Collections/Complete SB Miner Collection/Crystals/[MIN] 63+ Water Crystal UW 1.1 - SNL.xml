@@ -1,14 +1,14 @@
 ﻿<!--
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
- Profile: [MIN] Diatomite               
+ Profile: [MIN] Water Crystal UW               
  Author: Str8_no_life                           
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
- Version: 1.0                                     
+ Version: 1.1                                     
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 -->
 <Profile>
 
-	<Name>[MIN] 63+ Diatomite (v1.0) -SNL</Name>
+	<Name>[MIN] 63+ Water Crystal -Under water- (v1.1) -SNL</Name>
 
 	<CodeChunks>
 		<CodeChunk Name="Wait">
@@ -40,14 +40,14 @@
 				<RunCode Name="MoveToWater"/>
 				<RunCode Name="Wait"/>
 				
-					<ExGather DiscoverUnknowns="true" Loops="0">
+					<ExGather DiscoverUnknowns="true">
 					
 					<GatherObjects>
 						<GatherObject>Rocky Outcrop</GatherObject>
 					</GatherObjects>
 					
 					<Items>
-						<GatherItem Name="Diatomite" />
+						<GatherItem Name="Water Crystal" />
 					</Items>
 					
 					<HotSpots>

@@ -17,7 +17,7 @@
 					<TeleportTo Name="Castrum Oriens" AetheryteId="98" />
 				</If>
 				
-					<ExGather DiscoverUnknowns="true" Loops="0">
+					<ExGather DiscoverUnknowns="true">
 				
 					<GatherObjects>
 						<GatherObject>Mineral Deposit</GatherObject>
@@ -28,7 +28,7 @@
 					</Items>
 					
 					<HotSpots>
-						<HotSpot Radius="25" XYZ="-303.1145, 77.42672, -450.2989" />
+						<HotSpot Radius="25" XYZ="-303.7664, 91.17002, -447.8066" />
 						<HotSpot Radius="20" XYZ="-296.8316, 76.76977, -471.2011" />
 						<HotSpot Radius="30" XYZ="-251.3481, 79.51752, -560.9902" />
 						<HotSpot Radius="15" XYZ="-131.7831, 70.48882, -524.1082" />

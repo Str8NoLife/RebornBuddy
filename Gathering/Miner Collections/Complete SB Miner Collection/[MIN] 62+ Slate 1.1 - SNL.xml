@@ -3,12 +3,12 @@
  Profile: [MIN] Slate               
  Author: Str8_no_life                           
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
- Version: 1.0                                     
+ Version: 1.1                                     
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 -->
 <Profile>
 
-	<Name>[MIN] 62+ Slate (v1.0) -SNL</Name>
+	<Name>[MIN] 62+ Slate (v1.1) -SNL</Name>
 
 	<Order>			
 
@@ -17,7 +17,7 @@
 					<TeleportTo Name="Ala Gannha" AetheryteId="100" />
 				</If>
 				
-					<ExGather DiscoverUnknowns="true" Loops="0">
+					<ExGather DiscoverUnknowns="true">
 					
 					<GatherObjects>
 						<GatherObject>Rocky Outcrop</GatherObject>
@@ -27,11 +27,14 @@
 						<GatherItem Name="Slate" />
 					</Items>
 					
+					<GatherSpots>
+						<IndirectApproachGatherSpot ApproachLocation="-12.91798, 112.7244, -393.7148" NodeLocation="-11.21539, 114.1222, -392.7825" />
+					</GatherSpots>
+					
 					<HotSpots>
-						<HotSpot Radius="20" XYZ="104.4426, 132.3978, -520.3786" />
-						<HotSpot Radius="20" XYZ="190.1709, 148.3933, -348.3352" />
-						<HotSpot Radius="10" XYZ="-10.2733, 134.8563, -374.4754" />
-						<HotSpot Radius="8" XYZ="-14.73359, 124.8442, -389.9182" />
+						<HotSpot Radius="40" XYZ="101.9714, 142.2195, -503.0048" />
+						<HotSpot Radius="40" XYZ="166.5977, 149.3336, -355.5518" />
+						<HotSpot Radius="30" XYZ="-14.73359, 124.8442, -389.9182" />
 					</HotSpots>
 					
 				</ExGather>

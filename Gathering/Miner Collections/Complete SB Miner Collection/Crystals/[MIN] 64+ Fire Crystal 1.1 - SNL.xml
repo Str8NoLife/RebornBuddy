@@ -1,14 +1,14 @@
 ﻿<!--
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
- Profile: [MIN] Crescent Spring Water               
+ Profile: [MIN] Fire Crystal               
  Author: Str8_no_life                           
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
- Version: 1.0                                     
+ Version: 1.1                                     
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 -->
 <Profile>
 
-	<Name>[MIN] 64+ Crescent Spring Water (v1.0) -SNL</Name>
+	<Name>[MIN] 64+ Fire Crystal (v1.1) -SNL</Name>
 
 	<Order>			
 
@@ -17,15 +17,19 @@
 					<TeleportTo Name="Namai" AetheryteId="107" />
 				</If>
 				
-					<ExGather DiscoverUnknowns="true" Loops="0">
+					<ExGather DiscoverUnknowns="true">
 					
 					<GatherObjects>
 						<GatherObject>Mineral Deposit</GatherObject>
 					</GatherObjects>
 					
 					<Items>
-						<GatherItem Name="Crescent Spring Water" />
+						<GatherItem Name="Fire Crystal" />
 					</Items>
+					
+					<GatherSpots>
+						<IndirectApproachGatherSpot ApproachLocation="572.7186, 90.60042, 112.8349" NodeLocation="576.0488, 91.74075, 114.4922" />
+					</GatherSpots>
 					
 					<HotSpots>
 						<HotSpot Radius="40" XYZ="503.9793, 67.83667, -63.21317" />

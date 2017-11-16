@@ -1,6 +1,6 @@
 ﻿<!--
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
- Profile: [MIN] Gyr Abanian Alumen               
+ Profile: [MIN] Raw Kyanite               
  Author: Str8_no_life                           
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
  Version: 1.1                                     
@@ -8,7 +8,7 @@
 -->
 <Profile>
 
-	<Name>[MIN] 60+ Gyr Abanian Alumen (v1.1) -SNL</Name>
+	<Name>[MIN] 62+ Raw Kyanite (v1.1) -SNL</Name>
 
 	<Order>			
 
@@ -18,26 +18,29 @@
 				</If>
 				
 					<ExGather DiscoverUnknowns="true">
-				
+					
 					<GatherObjects>
 						<GatherObject>Mineral Deposit</GatherObject>
 					</GatherObjects>
 					
 					<Items>
-						<GatherItem Name="Gyr Abanian Alumen" />
+						<GatherItem Name="Raw Kyanite" />
 					</Items>
 					
+					<GatherSpots>
+						<IndirectApproachGatherSpot ApproachLocation="91.08487, 48.65793, -407.4059" NodeLocation="90.52106, 49.82163, -409.1239" />
+					</GatherSpots>
+					
 					<HotSpots>
-						<HotSpot Radius="25" XYZ="-303.7664, 91.17002, -447.8066" />
-						<HotSpot Radius="20" XYZ="-296.8316, 76.76977, -471.2011" />
-						<HotSpot Radius="30" XYZ="-251.3481, 79.51752, -560.9902" />
-						<HotSpot Radius="15" XYZ="-131.7831, 70.48882, -524.1082" />
-						<HotSpot Radius="30" XYZ="-112.2739, 66.14925, -478.8643" />
+						<HotSpot Radius="26" XYZ="93.27251, 71.54698, -395.6156" />
+						<HotSpot Radius="30" XYZ="90.003, 64.60847, -318.9069" />
+						<HotSpot Radius="30" XYZ="220.4771, 79.13238, -315.9919" />
+						<HotSpot Radius="20" XYZ="126.6851, 81.69329, -407.8371" />
 					</HotSpots>
 					
 				</ExGather>
 			</While>
-
+			
 	</Order>
 
 </Profile>

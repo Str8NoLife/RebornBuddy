@@ -3,12 +3,12 @@
  Profile: [MIN] Molybdenum Ore               
  Author: Str8_no_life                           
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
- Version: 1.0                                     
+ Version: 1.1                                     
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 -->
 <Profile>
 
-	<Name>[MIN] 70+ Molybdenum Ore (v1.0) -SNL</Name>
+	<Name>[MIN] 70+ Molybdenum Ore (v1.1) -SNL</Name>
 
 	<Order>			
 
@@ -17,7 +17,7 @@
 					<TeleportTo Name="Port Praetoria" AetheryteId="102" />
 				</If>
 				
-					<ExGather DiscoverUnknowns="true" Loops="0">
+					<ExGather DiscoverUnknowns="true">
 					
 					<GatherObjects>
 						<GatherObject>Mineral Deposit</GatherObject>

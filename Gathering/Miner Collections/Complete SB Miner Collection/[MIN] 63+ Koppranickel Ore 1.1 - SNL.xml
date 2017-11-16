@@ -3,12 +3,12 @@
  Profile: [MIN] Koppranickel Ore               
  Author: Str8_no_life                           
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
- Version: 1.0                                     
+ Version: 1.1                                     
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 -->
 <Profile>
 
-	<Name>[MIN] 63+ Koppranickel Ore (v1.0) -SNL</Name>
+	<Name>[MIN] 63+ Koppranickel Ore (v1.1) -SNL</Name>
 
 	<Order>			
 
@@ -17,7 +17,7 @@
 					<TeleportTo Name="Onokoro" AetheryteId="106" />
 				</If>
 				
-					<ExGather DiscoverUnknowns="true" Loops="0">
+					<ExGather DiscoverUnknowns="true">
 					
 					<GatherObjects>
 						<GatherObject>Mineral Deposit</GatherObject>

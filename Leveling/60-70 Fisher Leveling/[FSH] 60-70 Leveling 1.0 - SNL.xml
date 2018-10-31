@@ -25,7 +25,7 @@
 					<TeleportTo Name="Castrum Oriens" AetheryteId="98" />
 				</If>
 				
-				<ExFish Mooch="0" Baits="Salmon Roe" MinFish="20" MaxFish="30" ShuffleFishSpots="True" Condition="IsTimeBetween(0,12)">
+				<ExFish Mooch="0" Bait="Salmon Roe" MinFish="20" MaxFish="30" ShuffleFishSpots="True" Condition="IsTimeBetween(0,12)">
 				
 					<FishSpots>
 						<FishSpot XYZ="-171.2814, 59.03613, -551.7431" Heading="6.262631" />
@@ -43,7 +43,7 @@
 				<If Condition="not IsOnMap(620)">
 					<TeleportTo Name="Ala Gannha" AetheryteId="100" />
 				</If>
-				<ExFish Mooch="0" Baits="Salmon Roe" MinFish="20" MaxFish="30" ShuffleFishSpots="True" Condition="IsTimeBetween(12,24)">
+				<ExFish Mooch="0" Bait="Salmon Roe" MinFish="20" MaxFish="30" ShuffleFishSpots="True" Condition="IsTimeBetween(12,24)">
 				
 					<FishSpots>
 						<FishSpot XYZ="182.245, 116.6021, -725.4677" Heading="1.244372" />
@@ -71,7 +71,7 @@
 					<TeleportTo Name="Onokoro" AetheryteId="106" />
 				</If>
 								
-				<ExFish Mooch="0" Baits="Live Shrimp" MinFish="20" MaxFish="30" ShuffleFishSpots="True" Condition="IsTimeBetween(0,18)">
+				<ExFish Mooch="0" Bait="Live Shrimp" MinFish="20" MaxFish="30" ShuffleFishSpots="True" Condition="IsTimeBetween(0,18)">
 				
 					<FishSpots>
 						<FishSpot XYZ="208.5496, 1.151003, -571.2318" Heading="1.078346" />
@@ -90,7 +90,7 @@
 					<TeleportTo Name="Kugane" AetheryteId="111" />
 				</If>
 								
-				<ExFish Mooch="0" Baits="Live Shrimp" MinFish="20" MaxFish="30" ShuffleFishSpots="True" Condition="IsTimeBetween(18,24)">
+				<ExFish Mooch="0" Bait="Live Shrimp" MinFish="20" MaxFish="30" ShuffleFishSpots="True" Condition="IsTimeBetween(18,24)">
 				
 					<FishSpots>
 						<FishSpot XYZ="-172.5674, -4.999995, 161.9869" Heading="4.720765" />
@@ -116,7 +116,7 @@
 					<TeleportTo Name="Reunion" AetheryteId="109" />
 				</If>
 								
-				<ExFish Mooch="0" Baits="Midge Larva" MinFish="20" MaxFish="30" ShuffleFishSpots="True" Condition="IsTimeBetween(0,12)">
+				<ExFish Mooch="0" Bait="Midge Larva" MinFish="20" MaxFish="30" ShuffleFishSpots="True" Condition="IsTimeBetween(0,12)">
 				
 					<FishSpots>
 						<FishSpot XYZ="37.58942, 29.26448, -69.45775" Heading="6.278534" />
@@ -134,7 +134,7 @@
 					<TeleportTo Name="Namai" AetheryteId="107" />
 				</If>
 								
-				<ExFish Mooch="0" Baits="Midge Larva" MinFish="20" MaxFish="30" ShuffleFishSpots="True" Condition="IsTimeBetween(12,24)">
+				<ExFish Mooch="0" Bait="Midge Larva" MinFish="20" MaxFish="30" ShuffleFishSpots="True" Condition="IsTimeBetween(12,24)">
 				
 					<FishSpots>
 						<FishSpot XYZ="37.65363, -0.3000003, 249.0466" Heading="3.335762" />
